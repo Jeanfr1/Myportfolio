@@ -1,0 +1,13 @@
+Construa um portfólio pessoal para Josean Araújo seguindo os mockups e os roteiros do kit “Inside the Creative Mind”. A entrega é uma implementação do projeto visual, com conteúdo real em HTML, layout responsivo e movimento em camadas.
+
+Use a paleta grafite, prata e azul contido dos tokens. Preserve a escala monumental do retrato, a direção de luz, os espaços vazios e a hierarquia editorial. Não transforme a referência em um template genérico com cards repetitivos. Não use uma imagem da página inteira como o site.
+
+Comece com a estrutura funcional sem animação: hero, projetos, estudos, sobre, processo e contato. Depois adicione a narrativa do scroll de acordo com roteiro-animacao.md. Utilize hero-desktop e hero-mobile como referência de composição e fallback; as camadas transparentes permitem a composição independente. Os PNGs são planos, não modelos 3D. Escolha uma versão 2.5D bem executada ou produza modelos 3D apropriados; não prometa rotação volumétrica usando apenas imagens planas.
+
+Os seis projetos são estudos conceituais. Use suas imagens originais, nomes e textos do roteiro. Cada estudo tem abertura, contexto, direção, imagens e ideia de animação. Não invente clientes, sites publicados, métricas, depoimentos ou prêmios. Link “Visitar site” somente com URL real confirmada.
+
+Mantenha texto legível e links utilizáveis durante as transições. Use teclado, foco visível, semântica e movimento reduzido. No celular, uma composição vertical limpa e um fluxo de trabalhos acessível; evite scroll horizontal obrigatório e pinning longo.
+
+O CTA de contato abre https://www.linkedin.com/in/josean-araujo-3ba63b17b/ . Não invente email, telefone, WhatsApp ou perfil GitHub. Não use links de agendamento dos negócios apresentados.
+
+O carregamento inicial deve priorizar a arte do hero e o texto. Carregue os trabalhos seguintes sob demanda. Otimize derivados para WebP/AVIF preservando os PNGs originais, com dimensões explícitas. Avalie o comportamento real em desktop, celular, movimento reduzido, zoom de 200% e navegação por teclado antes de publicar.

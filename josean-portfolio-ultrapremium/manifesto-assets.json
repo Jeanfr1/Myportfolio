@@ -1,0 +1,384 @@
+{
+  "concept": "Inside the Creative Mind",
+  "imageCount": 27,
+  "files": [
+    {
+      "path": "00-referencias/01-perfil-original.png",
+      "width": 1436,
+      "height": 1340,
+      "mode": "RGBA",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1429290,
+      "sha256": "84d0bb0c4f30207c7ebf9f4af11a74c71aabf9b25e13840f5c572b2d0c9484bc",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "00-referencias/02-estilo-compartilhado.png",
+      "width": 1000,
+      "height": 1502,
+      "mode": "RGBA",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1786760,
+      "sha256": "2c4738cdb42580bd8d8096a05f07411a67c97636842e14f6c8f7766bd66d4242",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "00-referencias/03-referencia-identidade.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1900791,
+      "sha256": "8ba7c007ab0b11ed7b4087d2264311cf0cf4e6f79d8cdcd5ccf4695e8e888905",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "01-conceitos/01-portfolio-desktop.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2422945,
+      "sha256": "3b9dfd303c7cc1077d4ef360ac987269e304712697661239a490ccba00d81d4c",
+      "role": "Visual direction only; rebuild layout and text in HTML"
+    },
+    {
+      "path": "01-conceitos/02-portfolio-mobile.png",
+      "width": 841,
+      "height": 1870,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2199003,
+      "sha256": "7e0dbf52bc05b9c639c8c3e2e94ddf30f1d93b44c61db07930773608d1f93f07",
+      "role": "Visual direction only; rebuild layout and text in HTML"
+    },
+    {
+      "path": "01-conceitos/03-storyboard-cinematografico.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2620775,
+      "sha256": "755392e07ce2a61c13d0eb4d2186225dd8887d5e0dd25022d55f56bd0564b6c0",
+      "role": "Visual direction only; rebuild layout and text in HTML"
+    },
+    {
+      "path": "02-hero/fundo-grafite.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1349765,
+      "sha256": "c9a0e941f1de0c3e14aadefaea75b19cd2d36de2d62caa85206b3cb62b4a99af",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "02-hero/hero-desktop.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2116849,
+      "sha256": "bc2e7573967d1c93a1397a2ccbc8685b1d8d50cd0572e21113c6d3ce07795683",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "02-hero/hero-mobile.png",
+      "width": 941,
+      "height": 1672,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2128701,
+      "sha256": "0c9db478cad289ae63154dccc72717905962936242813a465330c739619a0051",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "02-hero/keyframe-universo-aberto.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2464075,
+      "sha256": "ca9b713c7f032af57ca5535e53d23c24409063ad0098faade002a98be14e7b90",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/josean-corpo-transparente.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bytes": 1327617,
+      "sha256": "37a81e2c7b1bfd4d48da345dcb0cf240e58ecd4ce6410506d923bd1a215649b3",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/logo-ja-transparente.png",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 184952,
+      "sha256": "f8d64dc4772d20e438638b7c2b40e8913e3c4a61339727c72545dbc1129747dd",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/portal-encerramento.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1909416,
+      "sha256": "3b4eeaae3c642ef18d342aed7cd6258f547e675dd764c248fa058f99cc44191e",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/portal-vidro-transparente.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 730146,
+      "sha256": "0abc29464db86707d95e56717933509703aabc890cfc5d6e3af2460932f9d2c1",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/retrato-encerramento.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1490145,
+      "sha256": "4b7f7693aa446c6a1cb9fbba8bb1f3cc1a1d56c4c9e57512ac574c5713a5652e",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "03-camadas/retrato-monumental-transparente.png",
+      "width": 1369,
+      "height": 1149,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 1814905,
+      "sha256": "1d58d17e581ef2b8e983f74bdc18a8fef3dbea830ec9f3bf8984c69dbd1733be",
+      "role": "Production artwork / independent layer / keyframe, as described in README"
+    },
+    {
+      "path": "04-projetos/01-automotives-sta-conceito.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2160878,
+      "sha256": "0d4b2efd551eec5b7fb7c8bdbdb749f6418bbc0aebcaaff2b11224481a35903d",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/02-isola-conceito.png",
+      "width": 1086,
+      "height": 1448,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2090854,
+      "sha256": "8db4125a56e8763788d0ced67030f2caf1e360857c5296326d6b46935b69d57e",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/03-legend-nails-conceito.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2143046,
+      "sha256": "14bdff73f0ea765e423a706f9739857d76484f4a250e0980dadce6074352cf52",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/04-orhan-barber-conceito.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2198839,
+      "sha256": "6330aa1173745116c9f03f441726168b3b1da7cdcfd75e0b9d6634ef703e05d1",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/05-bayro-cut-conceito.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 2045539,
+      "sha256": "2b4d48811e0d3353e4821e7ec76368c8753994d33a8799ae49843abb986b1719",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/06-mm-cleaning-ambiente.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 1663584,
+      "sha256": "3c3cb509b5fd340bab1530ec0c4b0d26c774128b218c1c48ce2c15b6554b35c3",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/isola-pistache-transparente.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 1618471,
+      "sha256": "4bb5b07d2bd39e8c5e2c7b16d6255f1b8e5ffc8aacfe2cf68eec5e5fa15ceb63",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/mm-ambiente-camadas.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "bytes": 1235756,
+      "sha256": "7b7fa6392a5418015ea7c5b57b2a065e0dfc852ea0392bf0107bdd6b3f6f9a05",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/orhan-navalha-transparente.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bytes": 1379632,
+      "sha256": "14880491a60aaf04db19be2372fe5b961d1142748df6a74ba4dc3db51936959a",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/sta-carro-scan.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "bytes": 1996178,
+      "sha256": "f5ab77135fa5ffc60b0d7f79f03f357710241cd7c140f6a17c8de0def53d6d95",
+      "role": "Reused project artwork from previous design studies"
+    },
+    {
+      "path": "04-projetos/sta-motor-transparente.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha": true,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "bytes": 2526371,
+      "sha256": "bb10249b24f267413dd37b756109fe4527a8d3df85c80c37b0ffb7169bf6e843",
+      "role": "Reused project artwork from previous design studies"
+    }
+  ]
+}

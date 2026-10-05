@@ -1,0 +1,38 @@
+{
+  "concept":"Inside the Creative Mind",
+  "implementationStatus":"Creative specification, not implemented or runtime-tested",
+  "imageRegistration":"Assets are art-directed variants, not pixel-registered video frames. Build a continuous layer composition and align it manually.",
+  "desktopHero":{
+    "pinVhRange":[320,380],
+    "fallback":"02-hero/hero-desktop.png",
+    "layers":[
+      {"id":"background","asset":"02-hero/fundo-grafite.png","z":0},
+      {"id":"portrait","asset":"03-camadas/retrato-monumental-transparente.png","z":10},
+      {"id":"projectPlanes","assetsDirectory":"04-projetos","z":20,"construction":"Independent HTML image elements or WebGL planes"},
+      {"id":"josean","asset":"03-camadas/josean-corpo-transparente.png","z":30},
+      {"id":"portal","asset":"03-camadas/portal-vidro-transparente.png","z":35},
+      {"id":"light","z":40,"construction":"Live SVG path or WebGL light trace, decorative"},
+      {"id":"text","z":50,"construction":"Semantic HTML"},
+      {"id":"navigation","z":60,"construction":"Semantic HTML links"}
+    ],
+    "beats":[
+      {"range":[0,0.12],"name":"Presence","action":"Reveal silver rim, human portrait and editorial heading"},
+      {"range":[0.12,0.32],"name":"Unfold","action":"Move rear planes, subtly reduce monumental portrait scale"},
+      {"range":[0.32,0.55],"name":"Reveal projects","action":"Bring six project planes into distinct depth levels"},
+      {"range":[0.55,0.76],"name":"Select universe","action":"Center STA, dim side planes, show project title"},
+      {"range":[0.76,1],"name":"Traverse","action":"Grow STA plane to viewport; change blue to project's red"}
+    ]
+  },
+  "mobile":{"fallback":"02-hero/hero-mobile.png","heroSvhRange":[100,120],"projectFlow":"Vertical natural flow","maximumOptionalPinSvh":180},
+  "reducedMotion":{"longPinning":false,"cameraZoom":false,"rotation":false,"mode":"Static hero and natural document flow"},
+  "projects":[
+    {"id":"sta","title":"Automotives STA","concept":"04-projetos/01-automotives-sta-conceito.png","visualStates":["04-projetos/sta-carro-scan.png","04-projetos/sta-motor-transparente.png"],"gesture":"Scan to engine","accent":"#F12E32"},
+    {"id":"isola","title":"Isola","concept":"04-projetos/02-isola-conceito.png","visualStates":["04-projetos/isola-pistache-transparente.png"],"gesture":"Ingredient orbit","accent":"#BDCF84"},
+    {"id":"legend","title":"Legend Nails","concept":"04-projetos/03-legend-nails-conceito.png","gesture":"Hand gesture and polish stroke","accent":"#72775D"},
+    {"id":"orhan","title":"Orhan Barber","concept":"04-projetos/04-orhan-barber-conceito.png","visualStates":["04-projetos/orhan-navalha-transparente.png"],"gesture":"Silver razor trace","accent":"#DCE3E9"},
+    {"id":"bayro","title":"Bayro Cut","concept":"04-projetos/05-bayro-cut-conceito.png","gesture":"Portrait light reveal","accent":"#B1BBC3"},
+    {"id":"cleaning","title":"M&M Cleaning","concept":"04-projetos/06-mm-cleaning-ambiente.png","visualStates":["04-projetos/mm-ambiente-camadas.png"],"gesture":"Architectural layers","accent":"#3F82CE"}
+  ],
+  "contact":{"art":"03-camadas/portal-encerramento.png","alternativePortrait":"03-camadas/retrato-encerramento.png","label":"Conversar no LinkedIn","url":"https://www.linkedin.com/in/josean-araujo-3ba63b17b/"},
+  "unsupportedByPNGsAlone":["True volumetric facial fragmentation","Full 3D camera orbit","Animated walking cycle","Physically accurate mechanical exploded view"]
+}

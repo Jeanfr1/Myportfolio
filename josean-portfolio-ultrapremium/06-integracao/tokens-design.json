@@ -1,0 +1,9 @@
+{
+  "concept": "Inside the Creative Mind",
+  "palette": {"background":"#080A0D","surface":"#151920","silver":"#DCE3E9","text":"#F7F9FB","accentLight":"#61B8FF","accentUI":"#295FFF"},
+  "typography": {"display":["Space Grotesk","Arial","sans-serif"],"body":["Inter","Arial","sans-serif"],"bodyPx":18,"mobileBodyPx":16,"minimumControlPx":14,"minimumMetadataPx":12,"displayDesktopPxRange":[72,140],"displayMobilePxRange":[40,64]},
+  "layout": {"desktopColumns":12,"mobileColumns":4,"gutterDesktopPx":24,"gutterMobilePx":16,"marginPercentRange":[5,7],"sectionSpacingDesktopPxRange":[100,160],"sectionSpacingMobilePxRange":[64,88]},
+  "motion": {"editorialEntryMsRange":[500,800],"hoverMsRange":[180,250],"projectSwitchMsRange":[650,900],"heroPinDesktopVhRange":[320,380],"heroMobileSvhRange":[100,120],"reducedMotion":"Static hero, natural document flow, no long pinning or camera zoom"},
+  "contact": {"label":"Conversar no LinkedIn","url":"https://www.linkedin.com/in/josean-araujo-3ba63b17b/"},
+  "contentStatus": "All six business projects are conceptual design studies. No live site URLs, client engagement or business results are asserted."
+}
