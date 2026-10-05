@@ -5,6 +5,8 @@
 <h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, six project windows emerge, and the camera goes through one of them into the work.</h3>
 
 <p>
+  <a href="https://josean-araujo.vercel.app"><strong>🌐 Live site</strong></a>
+  &nbsp;·&nbsp;
   <a href="#hero-animation"><strong>🎬 How the hero works</strong></a>
   &nbsp;·&nbsp;
   <a href="#the-six-studies"><strong>🗂️ The six studies</strong></a>
@@ -13,6 +15,7 @@
 </p>
 
 <p>
+  <a href="https://josean-araujo.vercel.app"><img src="https://img.shields.io/badge/Vercel-Live-080A0D?style=for-the-badge&logo=vercel&logoColor=white" alt="Live on Vercel" /></a>
   <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6" />
   <img src="https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Animation_library-none-61B8FF?style=for-the-badge" alt="No animation library" />
@@ -42,8 +45,8 @@ From there each study keeps its own identity (the scan of a car, an orbit of fla
 ## 🎬 The hero animation
 
 <div align="center">
-  <img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, six project windows emerge, Automotives STA moves into a glass portal and fills the screen, then the STA chapter scans the car and reveals the engine" width="100%" />
-  <sub>Scroll-scrubbed · captured at 1440 × 900</sub>
+  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, six project windows emerge, Automotives STA moves into a glass portal and fills the screen, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
+  <sub>Scroll-scrubbed on the live site · captured at 1440 × 900</sub>
 </div>
 
 <br />
@@ -221,7 +224,11 @@ Myportfolio/
 
 ## 🚀 Deployment
 
-The site is a static multi-page build and is ready for **Vercel** (`vercel.json` pins the Vite build and caches hashed assets for a year; `.vercelignore` keeps the art kit out of the upload). It is not published yet.
+Hosted on **Vercel** and connected to this repository: every push to `main` ships to production.
+
+**Live site:** [josean-araujo.vercel.app](https://josean-araujo.vercel.app)
+
+`vercel.json` pins the Vite build and caches hashed assets for a year; `.vercelignore` keeps the art kit out of the upload.
 
 | Setting          | Value           |
 | :--------------- | :-------------- |
@@ -240,7 +247,7 @@ Each open item is marked `TODO(portfolio)` in the code.
 - [ ] Email, GitHub and WhatsApp: add them only once the real addresses are confirmed; LinkedIn stays the main path
 - [ ] A bilingual version (EN / FR) translating navigation, studies and contact in full
 - [ ] A concept mockup for M&M Cleaning (the kit has the room, not the page)
-- [ ] Domain (then add `canonical` and `og:url`, and make `og:image` absolute)
+- [ ] Custom domain (then add `canonical` and `og:url`, and make `og:image` absolute)
 - [ ] Optional: a produced 3D model or frame sequence for a truly volumetric camera, as the kit notes
 
 <br />
@@ -250,7 +257,7 @@ Each open item is marked `TODO(portfolio)` in the code.
 - The *Inside the Creative Mind* art kit: direction, concepts, layers and roteiros
 - **[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)** by Florian Karsten and **[Inter](https://rsms.me/inter/)** by Rasmus Andersson (both OFL)
 - **[sharp](https://sharp.pixelplumbing.com)** and **[OpenCV](https://opencv.org)** for the asset pipeline
-- **[Vite](https://vite.dev)**
+- **[Vite](https://vite.dev)** and **[Vercel](https://vercel.com)**
 
 <br />
 
