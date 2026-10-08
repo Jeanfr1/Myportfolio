@@ -1,18 +1,22 @@
 import { defineConfig } from 'vite';
-import { readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { LOCALES } from './src/i18n/locales.js';
+import { projects } from './src/data/projects.js';
 
-// one page + the six study pages (estudos/<slug>/index.html, written by `npm run studies`)
-const studies = readdirSync(resolve(__dirname, 'estudos'), { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => [`estudo-${d.name}`, resolve(__dirname, 'estudos', d.name, 'index.html')]);
+// every page in every language (written by `npm run pages`): / , /en/ , /fr/ and the six studies
+// under each language's studies folder (/estudos/, /en/studies/, /fr/etudes/)
+const page = (url) => resolve(__dirname, `${url.replace(/^\//, '')}index.html`);
+const input = Object.fromEntries(
+  LOCALES.flatMap((l) => [
+    [l.code === 'pt' ? 'main' : l.code, page(l.home)],
+    ...projects.map((p) => [`${l.code}-${p.slug}`, page(`${l.studies}${p.slug}/`)]),
+  ]),
+);
 
 export default defineConfig({
   build: {
     target: 'es2020',
     assetsInlineLimit: 0, // keep every image as its own cacheable file
-    rollupOptions: {
-      input: { main: resolve(__dirname, 'index.html'), ...Object.fromEntries(studies) },
-    },
+    rollupOptions: { input },
   },
 });

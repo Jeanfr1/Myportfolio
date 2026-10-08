@@ -2,14 +2,14 @@
   "name": "josean-araujo-portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "Josean Araújo — Inside the Creative Mind: personal portfolio with a layered scroll hero and six concept studies.",
+  "description": "Josean Araújo — Inside the Creative Mind: personal portfolio in Portuguese, English and French, with a layered scroll hero and six concept studies.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run pages && vite",
+    "build": "npm run pages && vite build",
     "preview": "vite preview",
     "images": "node scripts/optimize-images.mjs",
-    "studies": "node scripts/build-studies.mjs"
+    "pages": "node scripts/build-pages.mjs"
   },
   "engines": {
     "node": ">=20.9.0"

@@ -9,12 +9,14 @@ import { initSta } from './js/sta.js';
 import { initScenes } from './js/scenes.js';
 import { initRail } from './js/rail.js';
 import { initReveal } from './js/reveal.js';
+import { initLang } from './js/lang.js';
 
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
 
 initAnchors();
 initHeader();
+initLang();
 initHero();
 initSta();
 initScenes();

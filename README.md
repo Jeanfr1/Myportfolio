@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Animation_library-none-61B8FF?style=for-the-badge" alt="No animation library" />
   <img src="https://img.shields.io/badge/%E2%99%BF_Accessibility-first-295FFF?style=for-the-badge" alt="Accessibility first" />
-  <img src="https://img.shields.io/badge/Idioma-pt--BR-151920?style=for-the-badge" alt="Written in Brazilian Portuguese" />
+  <img src="https://img.shields.io/badge/Languages-PT%20%C2%B7%20EN%20%C2%B7%20FR-151920?style=for-the-badge" alt="In Portuguese, English and French" />
 </p>
 
 </div>
@@ -31,11 +31,12 @@
 
 This is the portfolio of **Josean Araújo**: design, development and AI. It follows the *Inside the Creative Mind* direction from the art kit: graphite, silver and a contained blue light; large neo-grotesque type; photography, silence and controlled movement. The visitor enters a creative universe. A **monumental portrait** opens into planes while Josean stays in the foreground, **six project windows** emerge from the same architecture, **Automotives STA** takes the centre inside a glass portal, and the camera **goes through the window** into the first study, on the very same image.
 
-From there each study keeps its own identity (the scan of a car, an orbit of flavours, an editorial stroke, a blade of light, a cut of light, a room in layers) inside one recognisable frame. Then the page slows down: who Josean is, how he works, and one way to start a conversation.
+From there each study keeps its own identity (the scan of a car, an orbit of flavours, an editorial stroke, a blade of light, a cut of light, a room in layers) inside one recognisable frame. Then the page slows down: who Josean is (including his years presenting and teaching technology at Microsoft in Dublin and at Hewlett Packard Enterprise in Paris), how he works, and one way to start a conversation. All of it reads in Portuguese, English or French.
 
 - **Cinematic first impression**: a pinned 2.5D scene made of the kit's own layers, with live HTML text over it
 - **Six universes, one signature**: every study has a scene, a page of its own and a link to its published prototype
 - **Readable without the animation**: the same content in natural order with reduced motion, on short screens and without JavaScript
+- **Three languages**: Portuguese at `/`, English at `/en/` and French at `/fr/`, every page translated in full, with a PT · EN · FR switch in the header
 - **Honest by default**: all six are presented as conceptual studies; no clients, launches, results or ratings are claimed
 
 <br />
@@ -78,7 +79,7 @@ The stage stays pinned for 360svh on wide screens and follows the five acts of t
 ## 🖥️ Sections
 
 <div align="center">
-  <img src=".github/assets/desktop-sections.jpg" alt="Desktop screenshots: the Automotives STA chapter with the engine, the Isola chapter with its orbit, the two barbershops side by side, and the silver About section" width="100%" />
+  <img src=".github/assets/desktop-sections.jpg" alt="Desktop screenshots in three languages: the Automotives STA chapter with the engine (Portuguese), the Isola chapter with its orbit (English), the two barbershops side by side (French), and the silver About section with the Hewlett Packard Enterprise and Microsoft experience" width="100%" />
 </div>
 
 <br />
@@ -92,18 +93,18 @@ The stage stays pinned for 360svh on wide screens and follows the five acts of t
 | 05  | **Orhan Barber** and **Bayro Cut**        | `#orhan`, `#bayro` | *Duas barbearias. Duas identidades.* A blade of light along the razor; a cut of light reveals the next portrait |
 | 06  | **M&M Cleaning** · O espaço em camadas    | `#mm`       | Light grey and blue; the room's planes recompose as architecture                                   |
 | —   | **Todos os estudos**                      | `#estudos`  | The six studies as a plain list: the way in without the animation                                  |
-| 07  | **Tecnologia começa com pessoas.**        | `#sobre`    | A silver pause: Josean at human scale, the text from the brief, base and languages, LinkedIn       |
+| 07  | **Tecnologia começa com pessoas.**        | `#sobre`    | A silver pause: Josean at human scale (his image stays on screen), his experience at Hewlett Packard Enterprise in Paris and Microsoft in Dublin, base, path, languages, LinkedIn |
 | 08  | **Da intenção à experiência.**            | `#processo` | Entender → Dar forma → Construir e refinar, with a line that runs through the steps as you read   |
 | 09  | **Vamos criar o próximo.**                | `#contato`  | The closing portal and one path: **Conversar no LinkedIn**                                         |
 
-A fixed index (01–06) follows the studies on wide screens; every study also has its own page at `/estudos/<slug>/` with the structure the brief asks for: name and sector, the opportunity, the direction, the interface (the concept mockup, which opens at full size), the movement in up to three states, Josean's role, and the next study.
+The names above are the Portuguese ones; the English and French pages carry the same sections under the same anchors. A fixed index (01–06) follows the studies on wide screens; every study also has its own page in each language (`/estudos/<slug>/`, `/en/studies/<slug>/`, `/fr/etudes/<slug>/`) with the structure the brief asks for: name and sector, the opportunity, the direction, the interface (the concept mockup, which opens at full size), the movement in up to three states, Josean's role, and the next study.
 
 <br />
 
 ## 📱 Mobile first, motion optional
 
 <div align="center">
-  <img src=".github/assets/mobile-screens.jpg" alt="Mobile screenshots: the opening with the name above Josean and the buttons below him, the project windows rising, and the Isola chapter" width="100%" />
+  <img src=".github/assets/mobile-screens.jpg" alt="Mobile screenshots: the opening in Portuguese with the name above Josean and the buttons below him, the English page with the language menu open, and the French About section with the Hewlett Packard Enterprise experience" width="100%" />
 </div>
 
 <br />
@@ -111,6 +112,7 @@ A fixed index (01–06) follows the studies on wide screens; every study also ha
 - On phones the vertical art keeps Josean whole: the name sits above him, the sentence and the buttons on the floor below him
 - A short pinned scene (180svh) brings three windows up and opens the STA image from its card, then the studies follow in a natural vertical flow
 - With `prefers-reduced-motion`, on short screens and without JavaScript there is no pinned section: a still hero and every study in order
+- The PT · EN · FR switch folds into a globe button with a small menu; the header fits from 320 px in all three languages
 - Every touch target is at least 44 px, no horizontal scroll at 375 px, and the layout holds at 200 % zoom
 
 <br />
@@ -119,7 +121,8 @@ A fixed index (01–06) follows the studies on wide screens; every study also ha
 
 - **🎞️ One timeline, five acts**: the brief's scroll script, scrubbed with long, soft deceleration and fully reversible
 - **🌐 Each study in its own colour**: the page takes on pistachio, cream, platinum, amber light and blue as you move through the work
-- **🗂️ Studies as pages**: `npm run studies` writes the six pages and the list from `src/data/projects.js`, so names, sectors and links live in one place
+- **🗣️ Three languages, real pages**: each language has its own URLs, `lang`, title, description and social preview, linked by `hreflang`; on a first visit the root follows the browser's language (any language other than Portuguese or French gets English), and a choice made in the switch is remembered and keeps the section you were reading
+- **🗂️ One source for 21 pages**: `npm run pages` writes the three home pages and the 18 study pages from two templates (`scripts/pages/`), the dictionaries in `src/i18n/` and `src/data/projects.js`, so names, sectors and links live in one place
 - **♿ Accessible by construction**: skip link, real headings, labelled navigation, visible focus, captions read in order, hidden-until-animated states that only apply once the code that reveals them runs
 - **🖼️ Image pipeline**: the kit's PNGs stay the source of truth; WebP sizes, cut layers, project windows, favicon and the social image come from `npm run images`
 - **✒️ Sharp monogram**: the JA mark is traced from the kit's PNG into an SVG (`scripts/trace-logo.py`)
@@ -133,7 +136,7 @@ A fixed index (01–06) follows the studies on wide screens; every study also ha
 
 ### Why this stack?
 
-- **Vite + plain JavaScript**: a portfolio doesn't need a framework runtime; the pages are static HTML with small, focused modules (about 8 KB of JavaScript, gzipped)
+- **Vite + plain JavaScript**: a portfolio doesn't need a framework runtime; the pages are static HTML with small, focused modules (about 9 KB of JavaScript, gzipped)
 - **No animation library**: the hero is a pure function of one scroll value; a `requestAnimationFrame` loop, CSS transforms and a few CSS custom properties are all it needs
 - **sharp + OpenCV for the assets**: cutting, registering and tracing the kit's images happens once, at build time, not in the browser
 - **Self-hosted Space Grotesk and Inter**: the type the brief suggests, with no third-party font requests
@@ -182,8 +185,8 @@ npm run preview
 # Regenerate the WebP images, favicon and social image from the kit
 npm run images
 
-# Rewrite the six study pages and the list of studies from src/data/projects.js
-npm run studies
+# Rewrite every page in PT, EN and FR from the templates and dictionaries (dev and build run it first)
+npm run pages
 
 # Optional, Python 3 (opencv-python, numpy, Pillow): re-register the hero layers, re-trace the monogram
 python3 scripts/register-hero.py
@@ -196,24 +199,30 @@ python3 scripts/trace-logo.py
 
 ```
 Myportfolio/
-├── index.html                    # Hero → six studies → all studies → about → process → contact → footer
-├── estudos/<slug>/index.html     # The six study pages (written by npm run studies)
+├── index.html                    # PT: hero → six studies → all studies → about → process → contact → footer
+├── en/index.html · fr/index.html # The same page in English and French
+├── estudos/<slug>/               # The six study pages in Portuguese
+├── en/studies/<slug>/ · fr/etudes/<slug>/  # …in English and French (all pages written by npm run pages)
 ├── src/
 │   ├── main.js · study.js        # Entries: fonts, styles, module init
-│   ├── styles/                   # main.css (tokens, hero modes, chapters) · study.css
+│   ├── styles/                   # main.css (tokens, hero modes, chapters, language switch) · study.css
+│   ├── i18n/
+│   │   ├── locales.js            # The three languages, their URLs and the site address
+│   │   └── pt.js · en.js · fr.js # Every text of the site, including the six studies and the About experience
 │   ├── data/
-│   │   ├── projects.js           # The six studies: names, sectors, direction, motion, role, prototype links
+│   │   ├── projects.js           # The six studies: names, accents, prototype links, concept sizes
 │   │   └── hero.json             # Layer registration on the hero art (generated by register-hero.py)
 │   ├── assets/brand/ja.svg       # The traced JA monogram
 │   └── js/
 │       ├── hero.js               # The five acts: art → layers, planes, windows, portal, traverse
 │       ├── sta.js                # Car → scan → engine
 │       ├── scenes.js             # Scroll progress for the other studies' gestures
+│       ├── lang.js               # PT · EN · FR switch: phone menu, remembered choice, same section
 │       ├── rail.js · header.js · anchors.js · reveal.js · motion.js
 ├── josean-portfolio-ultrapremium/ # The art kit: references, concepts, hero, layers, projects, roteiros, tokens
 ├── scripts/
 │   ├── optimize-images.mjs       # PNG → WebP, cut layers, project windows, favicon, OG image
-│   ├── build-studies.mjs         # Study pages + list from the data
+│   ├── build-pages.mjs           # Writes the 21 pages from the templates in pages/ (home.mjs, study.mjs, shared.mjs)
 │   ├── register-hero.py          # SIFT registration of the hero layers
 │   └── trace-logo.py             # JA monogram → SVG
 ├── public/                       # Favicon, touch icon, Open Graph image, full-size concepts
@@ -242,12 +251,13 @@ Hosted on **Vercel** and connected to this repository: every push to `main` ship
 
 Each open item is marked `TODO(portfolio)` in the code.
 
-- [ ] Approve the About text and the hero sentence (both come from the roteiro; no years, titles or awards are added)
+- [ ] Approve the hero sentence (from the roteiro) and review the English and French copy (`src/i18n/en.js`, `src/i18n/fr.js`)
+- [x] About: the Hewlett Packard Enterprise and Microsoft experience, as written in Josean's Technical Trainer CV (13/07/2026), his choice
 - [ ] Confirm that the six **published prototypes** should be linked from the portfolio (`prototype` in `src/data/projects.js`; `null` hides a link)
 - [ ] Email, GitHub and WhatsApp: add them only once the real addresses are confirmed; LinkedIn stays the main path
-- [ ] A bilingual version (EN / FR) translating navigation, studies and contact in full
+- [x] English and French versions translating navigation, studies and contact in full
 - [ ] A concept mockup for M&M Cleaning (the kit has the room, not the page)
-- [ ] Custom domain (then add `canonical` and `og:url`, and make `og:image` absolute)
+- [ ] Custom domain: change `SITE` in `src/i18n/locales.js` and run `npm run pages` (canonical, `og:url`, `hreflang` and `og:image` follow)
 - [ ] Optional: a produced 3D model or frame sequence for a truly volumetric camera, as the kit notes
 
 <br />
