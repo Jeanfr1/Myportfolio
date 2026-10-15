@@ -2,7 +2,7 @@
 
 <img src=".github/assets/banner.png" alt="Josean Araújo — Design, desenvolvimento e IA. Visão. Código. Movimento." width="100%" />
 
-<h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, the windows of eight real client sites emerge, and the camera goes through one of them into the work, sorted by sector.</h3>
+<h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, the windows of eight real client sites emerge and burst out to the sides, and the work follows, sorted by sector.</h3>
 
 <p>
   <a href="https://josean-araujo.vercel.app"><strong>🌐 Live site</strong></a>
@@ -29,7 +29,7 @@
 
 ## 🚀 Overview
 
-This is the portfolio of **Josean Araújo**: design, development and AI. It follows the *Inside the Creative Mind* direction from the art kit: graphite, silver and a contained blue light; large neo-grotesque type; photography, silence and controlled movement. A **monumental portrait** opens into planes while Josean stays in the foreground, the **windows of eight live sites** emerge from the same architecture, **Automotives STA** takes the centre inside a glass portal, and the camera **goes through the window** into the work, on the very same image.
+This is the portfolio of **Josean Araújo**: design, development and AI. It follows the *Inside the Creative Mind* direction from the art kit: graphite, silver and a contained blue light; large neo-grotesque type; photography, silence and controlled movement. A **monumental portrait** opens into planes while Josean stays in the foreground, the **windows of eight live sites** emerge from the same architecture, all at the same scale, and **burst out to the sides**; then the work begins with the Automotives STA chapter.
 
 The work is **eight websites Josean designed, built and sold to real businesses**, sorted by sector: cars and motorbikes, bars, cafés and restaurants, an ice cream shop and a barbershop. Every sector opens with its name in giant type and a **cloud of particles that forms a real object from one of its sites** (the Chez TonTon bottle becomes the Cabane glass; the Rumi signature becomes the Lovinspoon sandwich). Every site arrives in its own colours, with **its opening recorded live** playing in a browser, three of its screens fanning out behind it and its phone screen in front. Then come **reels and motion graphics**, the full list, who Josean is (including his years presenting and teaching technology at Microsoft in Dublin and at Hewlett Packard Enterprise in Paris), how he works, and one way to start a conversation. All of it reads in Portuguese, English or French.
 
@@ -46,30 +46,30 @@ The work is **eight websites Josean designed, built and sold to real businesses*
 ## 🎬 The hero animation
 
 <div align="center">
-  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, the windows of eight live sites emerge, Automotives STA moves into a glass portal and fills the screen, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
+  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, the windows of eight live sites emerge and burst out to the sides, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
   <sub>Scroll-scrubbed on the live site · captured at 1440 × 900</sub>
 </div>
 
 <br />
 
-The stage stays pinned for 360svh on wide screens and follows the five acts of the brief:
+The stage stays pinned for 320svh on wide screens and plays five acts:
 
 | Scroll    | What happens                                                                                                              |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------ |
-| 0.00–0.12 | **Presence**: the finished art, the name, *Visão. Código. Movimento.*; a silver light runs along the edge of the portrait |
-| 0.12–0.32 | **Unfold**: under one band of light the art hands over to its own layers; the glass planes drift apart, the portrait recedes about 5 %, Josean barely moves |
-| 0.32–0.55 | **Reveal**: eight windows, each the live site's first screen, emerge from behind the portrait, three in front and five further back; *Cada ideia abre um novo universo.* with the five sectors |
-| 0.55–0.76 | **Select**: Automotives STA moves into the glass portal; the other windows lose scale and light                          |
-| 0.76–1.00 | **Traverse**: the portal passes the camera, the window straightens to the screen and the blue gives way to the site's red |
-| after     | **Car → scan → engine**: the STA chapter opens on the same image; a blue line scans the body, then the engine takes the scene behind a vertical edge |
+| 0.00–0.14 | **Presence**: the finished art, the name, *Visão. Código. Movimento.*; a silver light runs along the edge of the portrait |
+| 0.14–0.34 | **Unfold**: under one band of light the art hands over to its own layers; the glass planes drift apart, the portrait recedes about 5 %, Josean barely moves |
+| 0.34–0.62 | **Reveal**: eight windows, each the live site's first screen, emerge from behind the portrait, three in front and five further back; *Cada ideia abre um novo universo.* with the five sectors |
+| 0.62–0.74 | **Hold**: the windows drift a little while the sectors are named                                                          |
+| 0.74–1.00 | **Burst**: the windows fly out to the sides, each along its own line from the face, front ones first; the light fades    |
+| after     | **Car → scan → engine**: the hero lets go and the work opens with the STA chapter; a blue line scans the body, then the engine takes the scene behind a vertical edge |
 
 **Under the hood**
 
 - 🧩 **One smoothed scroll value drives everything.** The scene is a pure function of the scroll position (`render()` in `src/js/hero.js`), so it runs backwards as cleanly as forwards and rebuilds on resize.
 - 📐 **Registered with SIFT.** The finished art paints first, then hands over to the transparent layers. The kit says they are not pixel-registered, so `scripts/register-hero.py` finds Josean and the portrait on the art with SIFT keypoints and a RANSAC similarity and writes the result to `src/data/hero.json`. The swap happens under a band of silver light, as the kit asks.
-- 🪟 **Real perspective, no 3D engine.** Every window and the step into the portal are projective transforms (`matrix3d`) computed from four corners; the portal's opening was measured on its PNG, so the STA window sits exactly inside it.
-- 🎯 **Seamless landing.** On wide screens the STA window takes the screen's own aspect, so when it fills the viewport it is exactly the first frame of the STA chapter. On phones the image opens from the card to the screen with a mask, so nothing is ever stretched.
-- 🎛️ **Three modes, picked before the first paint.** `hero-scroll` on wide screens, `hero-compact` on phones and tablets (180svh, three windows), `hero-static` with reduced motion, on short screens (such as 200 % zoom) and without JavaScript.
+- 🪟 **Real perspective, no 3D engine.** Every window is a projective transform (`matrix3d`) computed from four corners; the burst pushes each one along the line from the face to its own centre, so the left windows leave left and the right ones leave right.
+- 🎯 **One car, once.** Automotives STA appears in the hero as one window among eight; its car, scan and engine play only in its own chapter, right after the hero.
+- 🎛️ **Three modes, picked before the first paint.** `hero-scroll` on wide screens, `hero-compact` on phones and tablets (210svh, five windows, the same burst), `hero-static` with reduced motion, on short screens (such as 200 % zoom) and without JavaScript.
 - ✍️ **Text stays live.** The name, captions and links are HTML over the scene, they only fade and move at most 40 px, and they stay focusable only while visible.
 
 <br />
@@ -87,7 +87,7 @@ The stage stays pinned for 360svh on wide screens and follows the five acts of t
 | #   | Section                                   | Anchor        | Role                                                                                              |
 | :-- | :---------------------------------------- | :------------ | :------------------------------------------------------------------------------------------------ |
 | 01  | **Josean Araújo**                         | `#inicio`     | The scene, **Explorar projetos** and a direct way to the full list                                |
-| 02  | **Automotivos** · Automotives STA, GetMOTO | `#automotivos` | The landing of the hero: car → scan → engine; then the scooter workshop in Luton               |
+| 02  | **Automotivos** · Automotives STA, GetMOTO | `#automotivos` | Right after the hero: car → scan → engine; then the scooter workshop in Luton                  |
 | 03  | **Bares** · Chez TonTon, La Cabane à Mousse | `#bares`    | Giant type and particles: the bottle becomes the glass; then the two bars                        |
 | 04  | **Cafés & Restaurantes** · Rumi Cafe, Lovinspoon | `#cafes` | The Rumi signature becomes the Lovinspoon sandwich; then the two Dublin cafés                 |
 | 05  | **Sorveteria** · isola                    | `#sorveteria` | A scoop and cone made of particles; then the flavours in orbit                                    |
@@ -111,7 +111,7 @@ The names above are the Portuguese ones; the English and French pages carry the 
 <br />
 
 - On phones the vertical art keeps Josean whole: the name sits above him, the sentence and the buttons on the floor below him
-- A short pinned scene (180svh) brings three windows up and opens the STA image from its card, then the sectors follow in a natural vertical flow; the particles stand under the text and the reels become a row you swipe
+- A short pinned scene (210svh) brings five windows up and bursts them out, then the sectors follow in a natural vertical flow; the particles stand under the text and the reels become a row you swipe
 - With `prefers-reduced-motion`, on short screens and without JavaScript there is no pinned section: a still hero, still particle objects, every site in order and no video playing on its own
 - Below 900 px the four sections live in a full-screen menu, and the PT · EN · FR switch folds into a globe button; the header fits from 320 px in all three languages
 - No video loads before it is needed: the home page opens with about 1.3 MB on a phone and none of the 8 loops or 6 reels
@@ -121,7 +121,7 @@ The names above are the Portuguese ones; the English and French pages carry the 
 
 ## ✨ Highlights
 
-- **🎞️ One timeline, five acts**: the brief's scroll script, scrubbed with long, soft deceleration and fully reversible
+- **🎞️ One timeline, five acts**: presence, unfold, reveal, hold and burst, scrubbed with long, soft deceleration and fully reversible
 - **✨ Particles that form real objects**: `scripts/emblems.py` samples 4,200 points from a cut-out of each site (density follows light, edges and local detail); `src/js/openers.js` draws them on a canvas, morphs them from one object to the next with the scroll and pushes them away from the pointer. It only runs while its sector is on screen
 - **🃏 Cards that fan open, type that assembles**: three real screens of each site open around its browser as the block comes in; sector names rise line by line in a mask; the manifesto lights up word by word (`src/js/kinetic.js`)
 - **🎥 The sites' own motion, recorded**: `scripts/capture/` scrubs each scroll-driven hero frame by frame and records the timed openings live, then builds seamless loops (forward and back, or a soft dissolve); they play only on screen
@@ -228,7 +228,7 @@ Myportfolio/
 │   │   └── hero.json             # Layer registration on the hero art (generated by register-hero.py)
 │   ├── assets/img · assets/video # WebP stills and posters of the live sites; their loops and the reels (H.264)
 │   └── js/
-│       ├── hero.js               # The five acts: art → layers, planes, eight windows, portal, traverse
+│       ├── hero.js               # The five acts: art → layers, planes, eight windows, hold, burst
 │       ├── sta.js                # Car → scan → engine
 │       ├── openers.js            # Sector openers: pin progress and the particle canvas
 │       ├── kinetic.js · scenes.js # Words that light up · scroll progress for the fans and titles

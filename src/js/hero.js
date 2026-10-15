@@ -2,19 +2,18 @@
 //
 // One smoothed scroll value drives every layer, so the scene is a pure function of the scroll
 // position and runs backwards as cleanly as forwards:
-//   0.00–0.12  presence   the finished art: Josean, the monumental portrait, the name
-//   0.12–0.32  unfold     the art hands over to its own layers; the glass planes behind the
+//   0.00–0.14  presence   the finished art: Josean, the monumental portrait, the name
+//   0.14–0.34  unfold     the art hands over to its own layers; the glass planes behind the
 //                         face drift apart, the portrait recedes ~5 %, Josean barely moves
-//   0.32–0.55  reveal     eight site windows emerge from behind the portrait, three in front
-//                         and five further back
-//   0.55–0.76  select     Automotives STA takes the centre inside the glass portal; the other
-//                         windows lose scale and light
-//   0.76–1.00  traverse   the window grows to fill the screen, the blue gives way to the
-//                         study's red, and the page continues in the STA chapter, on the same image
+//   0.34–0.62  reveal     the eight sites emerge from behind the portrait as small windows, each
+//                         one the live site's first screen, three in front and five further back
+//   0.62–0.74  hold       the windows drift a little; the sectors are named
+//   0.74–1.00  burst      the windows fly out to the sides, each along its own direction from the
+//                         face; then the hero lets go and the page continues in the STA chapter
 //
 // Modes (picked in index.html before first paint, kept in sync here):
-//   scroll  – wide screens: pinned over 360svh, the full layered scene
-//   compact – phones and tablets: 180svh, the finished art, three windows, the same landing
+//   scroll  – wide screens: pinned over 320svh, the full layered scene
+//   compact – phones and tablets: 210svh, the finished art, five windows, the same burst
 //   static  – prefers-reduced-motion (and no JS): the finished art and the text, no pinning
 import hero from '../data/hero.json';
 import { media, lerp, range, smooth, ease, windowed } from './motion.js';
@@ -30,37 +29,24 @@ const root = document.documentElement;
 // ---------- scroll script (fractions of the pinned distance) ----------
 const T = {
   scroll: {
-    sweep: [0.1, 0.24], // a band of silver light crosses the scene: the hand-over happens under it
-    layersIn: [0.14, 0.18], // the art's own layers come up over it …
-    artOut: [0.17, 0.25], // … and the art steps away
-    copyOut: [0.12, 0.26],
-    unfold: [0.12, 0.34],
-    light: [0.04, 0.5],
-    windows: [0.32, 0.55],
-    select: [0.55, 0.72],
-    portalIn: [0.56, 0.66],
-    grow: [0.78, 0.98], // the portal and its window come towards the camera …
-    rectify: [0.86, 0.98], // … and the window straightens to the screen
-    portalOut: [0.84, 0.95],
-    content: [0.8, 0.9], // concept -> the study's own image
-    edge: [0.88, 0.98],
-    tint: [0.76, 0.96],
-    peopleOut: [0.74, 0.86],
-    captions: { reveal: [0.34, 0.4, 0.52, 0.57], select: [0.6, 0.65, 0.76, 0.81] },
+    sweep: [0.12, 0.3], // a band of silver light crosses the scene: the hand-over happens under it
+    layersIn: [0.16, 0.2], // the art's own layers come up over it …
+    artOut: [0.19, 0.27], // … and the art steps away
+    copyOut: [0.14, 0.3],
+    unfold: [0.14, 0.4],
+    light: [0.04, 0.56],
+    windows: [0.34, 0.62],
+    drift: [0.6, 0.76],
+    burst: [0.74, 0.98],
+    captions: { reveal: [0.42, 0.48, 0.72, 0.78] },
   },
   compact: {
     copyOut: [0.08, 0.26],
     veil: [0.2, 0.5],
-    windows: [0.24, 0.5],
-    select: [0.52, 0.7],
-    grow: [2, 3], // compact never grows the card: the image opens out of it instead
-    content: [0.64, 0.74], // concept -> the study's image, inside the card …
-    full: [0.74, 0.97], // … then the same image opens from the card to the whole screen
-    fullIn: [0.72, 0.78],
-    cardOut: [0.8, 0.86],
-    edge: [0.86, 0.98],
-    tint: [0.76, 0.96],
-    captions: { reveal: [0.3, 0.36, 0.48, 0.53], select: [0.56, 0.61, 0.74, 0.79] },
+    windows: [0.26, 0.56],
+    drift: [0.54, 0.7],
+    burst: [0.7, 0.96],
+    captions: { reveal: [0.34, 0.4, 0.68, 0.74] },
   },
 };
 
@@ -69,11 +55,11 @@ const T = {
 // centre, width (× W), yaw (perspective: >0 shortens the right edge) and plane (front / back).
 // Laid out like keyframe-universo-aberto.png, kept clear of Josean and of the face.
 const WINDOWS = [
-  { slug: 'sta', scroll: { x: 0.2, y: 0.32, w: 0.27, yaw: 0.14, front: true }, compact: { x: 0.5, y: 0.6, w: 0.86, yaw: 0, front: true } },
-  { slug: 'isola', scroll: { x: 0.12, y: 0.6, w: 0.15, yaw: 0.08, front: true }, compact: { x: 0.27, y: 0.3, w: 0.44, yaw: 0.1, front: false } },
-  { slug: 'cabane', scroll: { x: 0.33, y: 0.58, w: 0.15, yaw: -0.06, front: true }, compact: { x: 0.73, y: 0.33, w: 0.44, yaw: -0.1, front: false } },
-  { slug: 'bayro', scroll: { x: 0.43, y: 0.18, w: 0.11, yaw: 0.1, front: false }, compact: null },
-  { slug: 'rumi', scroll: { x: 0.93, y: 0.2, w: 0.12, yaw: -0.14, front: false }, compact: null },
+  { slug: 'sta', scroll: { x: 0.21, y: 0.31, w: 0.17, yaw: 0.14, front: true }, compact: { x: 0.28, y: 0.27, w: 0.46, yaw: 0.1, front: true } },
+  { slug: 'isola', scroll: { x: 0.12, y: 0.6, w: 0.15, yaw: 0.08, front: true }, compact: { x: 0.22, y: 0.5, w: 0.4, yaw: 0.08, front: false } },
+  { slug: 'cabane', scroll: { x: 0.33, y: 0.58, w: 0.15, yaw: -0.06, front: true }, compact: { x: 0.74, y: 0.36, w: 0.44, yaw: -0.1, front: true } },
+  { slug: 'bayro', scroll: { x: 0.43, y: 0.18, w: 0.11, yaw: 0.1, front: false }, compact: { x: 0.52, y: 0.13, w: 0.34, yaw: 0, front: false } },
+  { slug: 'rumi', scroll: { x: 0.93, y: 0.2, w: 0.12, yaw: -0.14, front: false }, compact: { x: 0.8, y: 0.6, w: 0.38, yaw: -0.08, front: false } },
   { slug: 'getmoto', scroll: { x: 0.93, y: 0.62, w: 0.12, yaw: -0.14, front: false }, compact: null },
   { slug: 'tonton', scroll: { x: 0.08, y: 0.16, w: 0.1, yaw: 0.12, front: false }, compact: null },
   { slug: 'lovinspoon', scroll: { x: 0.8, y: 0.86, w: 0.11, yaw: -0.1, front: false }, compact: null },
@@ -96,8 +82,7 @@ const PLANES = [
   [1520, 160, 120, 200],
 ];
 const FACE = [1180, 360]; // centre of the portrait on the art: planes drift away from it
-// the light: along the floor from the far side, under Josean's feet, towards the empty left
-// (art px); once the windows are out it climbs to the STA window and stays on it
+// the light: along the floor from the far side, under Josean's feet, towards the empty left (art px)
 const LIGHT = [
   [1650, 768],
   [1260, 760],
@@ -186,17 +171,13 @@ export function initHero() {
     portrait: stage.querySelector('[data-layer="portrait"]'),
     rim: stage.querySelector('[data-rim]'),
     sweep: stage.querySelector('[data-sweep]'),
-    full: stage.querySelector('[data-full]'),
     josean: stage.querySelector('[data-layer="josean"]'),
     windows: stage.querySelector('[data-windows]'),
-    portal: stage.querySelector('[data-portal]'),
-    tint: stage.querySelector('[data-tint]'),
     light: stage.querySelector('[data-light]'),
     lightPath: stage.querySelector('[data-light-path]'),
     copy: stage.querySelector('[data-hero-copy]'),
     captions: {
       reveal: stage.querySelector('[data-caption="reveal"]'),
-      select: stage.querySelector('[data-caption="select"]'),
     },
     progress: stage.querySelector('[data-progress]'),
     cue: stage.querySelector('[data-cue]'),
@@ -216,16 +197,8 @@ export function initHero() {
     img.alt = '';
     img.decoding = 'async';
     n.append(img);
-    let next = null;
-    if (w.slug === 'sta') {
-      next = document.createElement('img');
-      next.alt = '';
-      next.decoding = 'async';
-      next.className = 'win-next';
-      n.append(next);
-    }
     el.windows.append(n);
-    return { ...w, node: n, img, next };
+    return { ...w, node: n, img };
   });
 
   let loaded = false;
@@ -242,18 +215,10 @@ export function initHero() {
       node.sizes = '50vw';
       node.src = url(`${name}-${w}`);
     }
-    el.portal.srcset = `${url('portal-900')} 900w, ${url('portal-1448')} 1448w`;
-    el.portal.sizes = '70vw';
-    el.portal.src = url('portal-1448');
     for (const w of wins) {
       w.img.srcset = `${url(`window-${w.slug}-640`)} 640w, ${url(`window-${w.slug}-1024`)} 1024w`;
-      w.img.sizes = w.slug === 'sta' ? '100vw' : '30vw';
+      w.img.sizes = '24vw';
       w.img.src = url(`window-${w.slug}-1024`);
-    }
-    for (const img of [wins[0].next, el.full.querySelector('img')]) {
-      img.srcset = `${url('sta-scan-1000')} 1000w, ${url('sta-scan-1672')} 1672w`;
-      img.sizes = '100vw';
-      img.src = url('sta-scan-1672');
     }
   }
 
@@ -299,42 +264,26 @@ export function initHero() {
       return { x: sx, y: sy0, w: w * k0, h: h * k0, dx: dir[0] / len, dy: dir[1] / len };
     });
 
-    // the windows
+    // the windows: from a point near the face out to their place, then on along the same line
     const L = mode === 'compact' ? 'compact' : 'scroll';
+    const origin = L === 'scroll' ? face : [W / 2, H * 0.42];
     const ws = wins.map((w) => {
       const d = w[L];
       if (!d) return null;
-      // the STA window becomes the screen in scroll mode, so it takes the screen's shape there
-      const aspect = w.slug === 'sta' && L === 'scroll' ? W / H : 1.6;
       const nw = 1024;
-      const nh = Math.round(nw / aspect);
+      const nh = 640;
       w.node.style.width = `${nw}px`;
       w.node.style.height = `${nh}px`;
       const ww = d.w * W;
-      // compact: the STA card is as tall as its width allows on a portrait screen
-      const wh = ww / aspect;
-      const reveal = windowQuad(d.x * W, d.y * H, ww, wh, d.yaw);
-      const start = scaleQuad(reveal, 0.08, L === 'scroll' ? face : [W / 2, H * 1.1]);
-      return { nw, nh, reveal, start, front: d.front };
+      const reveal = windowQuad(d.x * W, d.y * H, ww, ww / 1.6, d.yaw);
+      const start = scaleQuad(reveal, 0.08, origin);
+      const c = centre(reveal);
+      const len = Math.hypot(c[0] - origin[0], c[1] - origin[1]) || 1;
+      const dir = [(c[0] - origin[0]) / len, (c[1] - origin[1]) / len];
+      return { nw, nh, reveal, start, dir, front: d.front };
     });
 
-    // the portal: its opening holds the STA window at the stage's aspect
-    const P = hero.portal;
-    const inner = P.inner;
-    const innerW = inner[1][0] - inner[0][0];
-    const innerH = (inner[3][1] - inner[0][1] + (inner[2][1] - inner[1][1])) / 2;
-    const span = L === 'scroll' ? 0.44 : 0.8;
-    const px = (span * W) / innerW;
-    const py = (span * H) / innerH;
-    const ic = [(inner[0][0] + inner[1][0]) / 2, (inner[0][1] + inner[3][1] + inner[1][1] + inner[2][1]) / 4];
-    const at = L === 'scroll' ? [0.5 * W, 0.47 * H] : [0.5 * W, 0.46 * H];
-    const portal = { px, py, x: at[0] - ic[0] * px, y: at[1] - ic[1] * py, c: at };
-    const portalQuad = inner.map(([x, y]) => [portal.x + x * px, portal.y + y * py]);
-    // compact has no portal: the card simply comes to the centre
-    const selectQuad = L === 'scroll' ? portalQuad : windowQuad(0.5 * W, 0.46 * H, 0.92 * W, (0.92 * W) / 1.6, 0);
-    const full = [[-W * 0.01, -H * 0.01], [W * 1.01, -H * 0.01], [W * 1.01, H * 1.01], [-W * 0.01, H * 1.01]];
-
-    G = { artSim, art, layer, planeRects, ws, portal, selectQuad, full, face };
+    G = { artSim, art, layer, planeRects, ws, face };
   }
 
   // ---------- render ----------
@@ -362,9 +311,7 @@ export function initHero() {
       el.sweep.style.opacity = sw > 0 && sw < 1 ? Math.sin(sw * Math.PI) : 0;
     }
 
-    const grow = ease(range(p, ...S.grow));
-    const peopleOut = compact ? 0 : smooth(range(p, ...S.peopleOut));
-    const sel = ease(range(p, ...S.select));
+    const drift = smooth(range(p, ...S.drift));
 
     if (!compact) {
       // unfold: planes drift apart, the portrait recedes ~5 %, Josean barely moves
@@ -374,7 +321,7 @@ export function initHero() {
         planes[i].style.transform = `translate3d(${(r.x + r.dx * d).toFixed(1)}px, ${(r.y + r.dy * d).toFixed(1)}px, 0)`;
         planes[i].style.width = `${r.w.toFixed(1)}px`;
         planes[i].style.height = `${r.h.toFixed(1)}px`;
-        planes[i].style.opacity = smooth(range(p, 0.12, 0.22)) * (0.85 - 0.35 * u) * (1 - sel * 0.6) * (1 - peopleOut);
+        planes[i].style.opacity = smooth(range(p, 0.12, 0.22)) * (0.85 - 0.35 * u);
       });
       const P = G.layer.portrait;
       const k = 1 - 0.05 * u;
@@ -383,18 +330,19 @@ export function initHero() {
       el.portrait.style.width = el.rim.style.width = `${P.w}px`;
       el.portrait.style.height = el.rim.style.height = `${P.h}px`;
       el.portrait.style.transform = el.rim.style.transform = matrix(ps);
-      show(el.portrait, Math.max(layersIn, 0) * (1 - 0.7 * sel) * (1 - peopleOut));
+      show(el.portrait, Math.max(layersIn, 0));
       show(el.rim, rim > 0 && rim < 1 ? 1 : 0);
       el.rim.style.setProperty('--rim', rim.toFixed(3));
       const J = G.layer.josean;
       el.josean.style.width = `${J.w}px`;
       el.josean.style.height = `${J.h}px`;
       el.josean.style.transform = matrix(sim(J.sim.s, J.sim.r, J.sim.x + 6 * u, J.sim.y));
-      show(el.josean, layersIn * (1 - 0.6 * sel) * (1 - peopleOut));
+      show(el.josean, layersIn);
     }
 
-    // the windows: emerge, give way to STA, and STA becomes the screen
+    // the windows: emerge from behind the portrait, drift, then burst out to the sides
     const [w0, w1] = S.windows;
+    const [b0, b1] = S.burst;
     wins.forEach((w, i) => {
       const g = G.ws[i];
       if (!g) {
@@ -402,66 +350,26 @@ export function initHero() {
         return;
       }
       const t = ease(range(p, w0 + STAGGER[i], w0 + STAGGER[i] + (w1 - w0) * 0.55));
-      let q = mixQuad(g.start, g.reveal, t);
-      let alpha = smooth(t) * (g.front ? 1 : 0.7);
-      let filter = g.front ? '' : 'blur(1.5px) brightness(0.7)';
-      if (w.slug === 'sta') {
-        q = mixQuad(q, G.selectQuad, sel);
-        if (grow > 0) {
-          const kq = compact ? 1 : 1 + 3.2 * grow * grow;
-          const grown = compact ? q : scaleQuad(q, kq, G.portal.c);
-          q = mixQuad(grown, G.full, smooth(range(p, ...S.rectify)));
-        }
-        alpha = Math.max(alpha, sel) * (compact ? 1 - smooth(range(p, ...S.cardOut)) : 1);
-        filter = '';
-        w.node.style.setProperty('--edge', (1 - smooth(range(p, ...S.edge))).toFixed(3));
-        w.next.style.opacity = smooth(range(p, ...S.content));
-      } else {
-        // the others lose scale and light, then leave
-        const c = centre(q);
-        const away = [c[0] - W / 2, c[1] - H / 2];
-        q = scaleQuad(q, 1 - 0.18 * sel).map(([x, y]) => [x + away[0] * 0.12 * sel, y + away[1] * 0.12 * sel]);
-        alpha *= (1 - 0.6 * sel) * (1 - smooth(range(p, 0.74, 0.84)));
-        if (sel > 0) filter = `blur(${(1.5 + 1.5 * sel).toFixed(2)}px) brightness(${(0.7 - 0.2 * sel).toFixed(2)})`;
-      }
+      // the burst: front windows go first and fastest, the far ones follow
+      const lag = g.front ? 0 : 0.03 + STAGGER[i] * 0.4;
+      const b = ease(range(p, b0 + lag, b1));
+      const out = W * (0.02 * drift + (g.front ? 0.75 : 0.6) * b);
+      const k = 1 + (g.front ? 0.55 : 0.35) * b;
+      const q = scaleQuad(mixQuad(g.start, g.reveal, t), k).map(([x, y]) => [x + g.dir[0] * out, y + g.dir[1] * out]);
+      const alpha = smooth(t) * (g.front ? 1 : 0.7) * (1 - smooth(range(b, 0.45, 1)));
       w.node.style.transform = quadMatrix(g.nw, g.nh, q);
-      w.node.style.filter = filter;
-      w.node.style.zIndex = w.slug === 'sta' ? 3 : g.front ? 2 : 1;
+      w.node.style.filter = g.front ? '' : `blur(${(1.5 + 2 * b).toFixed(2)}px) brightness(0.7)`;
+      w.node.style.zIndex = g.front ? 2 : 1;
       show(w.node, alpha);
-      if (w.slug === 'sta') G.staQuad = q;
     });
 
-    // the portal frames STA, then passes the camera
-    if (!compact) {
-      const kq = 1 + 3.2 * grow * grow;
-      const Pp = G.portal;
-      const cx = Pp.c[0];
-      const cy = Pp.c[1];
-      el.portal.style.transform = `matrix(${(Pp.px * kq).toFixed(5)}, 0, 0, ${(Pp.py * kq).toFixed(5)}, ${(cx + (Pp.x - cx) * kq).toFixed(2)}, ${(cy + (Pp.y - cy) * kq).toFixed(2)})`;
-      show(el.portal, smooth(range(p, ...S.portalIn)) * (1 - smooth(range(p, ...S.portalOut))));
-    }
-    el.tint.style.opacity = smooth(range(p, ...S.tint));
-
-    // compact: the image opens from the card to the whole screen
-    if (compact && G.staQuad) {
-      const f = ease(range(p, ...S.full));
-      const xs = G.staQuad.map((c) => c[0]);
-      const ys = G.staQuad.map((c) => c[1]);
-      const ins = [Math.min(...ys), W - Math.max(...xs), H - Math.max(...ys), Math.min(...xs)].map((v) => Math.max(0, v * (1 - f)));
-      el.full.style.clipPath = `inset(${ins.map((v) => `${v.toFixed(1)}px`).join(' ')})`;
-      show(el.full, smooth(range(p, ...S.fullIn)));
-    }
-
-    // the light: along the floor, up to the face, then to the STA window
+    // the light: along the floor, under Josean's feet, towards the empty left; it fades as the windows burst
     if (!compact) {
       const d = ease(range(p, ...S.light));
-      const pts = LIGHT.map((q) => apply(G.artSim, q));
-      const q = G.staQuad;
-      if (q && p > S.windows[0]) pts.push(q[3], [lerp(q[3][0], q[2][0], 0.5), lerp(q[3][1], q[2][1], 0.5)]);
-      el.lightPath.setAttribute('d', curve(pts));
+      el.lightPath.setAttribute('d', curve(LIGHT.map((q) => apply(G.artSim, q))));
       el.lightPath.setAttribute('pathLength', '1');
       el.lightPath.style.strokeDasharray = `${d.toFixed(4)} 1`;
-      el.light.style.opacity = d > 0 ? 1 - smooth(range(p, 0.7, 0.8)) : 0;
+      el.light.style.opacity = d > 0 ? 1 - smooth(range(p, 0.7, 0.84)) : 0;
     }
 
     // copy and captions: they keep their place, fade and move at most 40 px
@@ -507,8 +415,8 @@ export function initHero() {
 
   // ---------- modes ----------
   const STYLED = () => [
-    el.art, el.bg, el.portrait, el.rim, el.sweep, el.full, el.josean, el.portal, el.tint, el.light, el.copy, el.progress, el.progress.parentElement, el.cue,
-    ...Object.values(el.captions), ...planes, ...wins.map((w) => w.node), ...wins.map((w) => w.next).filter(Boolean),
+    el.art, el.bg, el.portrait, el.rim, el.sweep, el.josean, el.light, el.copy, el.progress, el.progress.parentElement, el.cue,
+    ...Object.values(el.captions), ...planes, ...wins.map((w) => w.node),
   ];
   function setMode(next) {
     if (next === mode) return;

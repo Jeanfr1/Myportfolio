@@ -90,7 +90,7 @@ function opener({ cat, t }) {
 
 function staChapter({ t, loc }) {
   const p = bySlug.sta;
-  return `<!-- 01 · Automotives STA: the hero lands here. Car -> scan -> engine (crossfade, short scale, vertical mask) -->
+  return `<!-- 01 · Automotives STA, the first chapter after the hero: car -> scan -> engine (crossfade, short scale, vertical mask) -->
         <article class="chapter chapter--sta" id="sta" aria-labelledby="sta-title" data-chapter="sta">
           <div class="sta-track" data-sta-track>
             <div class="sta-stage" data-sta-stage>
@@ -250,8 +250,8 @@ export function home(loc, t) {
     ${header({ loc, t, alternates })}
 
     <!-- 01 / Hero, "Inside the Creative Mind". Scroll mode: the stage stays pinned while the portrait
-         opens into planes, eight site windows emerge, Automotives STA takes the portal and the
-         camera goes through it. The name, the text and the links are live HTML. -->
+         opens into planes, the eight sites emerge as small windows and burst out to the sides; then the
+         page continues in the STA chapter. The name, the text and the links are live HTML. -->
     <div class="hero-track" id="inicio" data-hero-track>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-stage" data-stage>
@@ -275,10 +275,7 @@ export function home(loc, t) {
             <img class="h-layer h-rim" alt="" decoding="async" data-rim />
             <div class="h-windows" data-windows></div>
             <img class="h-layer h-josean" alt="" decoding="async" data-layer="josean" />
-            <img class="h-portal" alt="" decoding="async" data-portal />
-            <span class="h-tint" data-tint></span>
             <span class="h-sweep" data-sweep></span>
-            <div class="h-full" data-full><img alt="" decoding="async" /></div>
             <svg class="h-light" data-light><path data-light-path /></svg>
           </div>
 
@@ -311,16 +308,6 @@ export function home(loc, t) {
               ${index}
             </ol>
           </div>
-          <div class="wrap hero-caption hero-caption--select" data-caption="select">
-            <p class="eyebrow"><span>${sta.number} / ${N}</span> ${esc(t.categories.automotivos.name)}</p>
-            <p class="caption-title">${esc(sta.name)}</p>
-            <p class="caption-sub">${esc(t.cases.sta.tagline)}</p>
-            <a class="btn btn--line" href="${caseUrl(loc, 'sta')}">
-              <span>${esc(t.work.case)}</span>
-              ${ARROW('i-arrow-right')}
-            </a>
-          </div>
-
           <div class="hero-progress" aria-hidden="true"><span data-progress></span></div>
           <p class="scroll-cue" aria-hidden="true" data-cue>${esc(t.hero.cue)}</p>
         </div>
@@ -328,7 +315,7 @@ export function home(loc, t) {
     </div>
 
     <main id="conteudo" class="content" tabindex="-1" data-content>
-      <!-- 02 / The work, by sector. The hero lands in the first site: same image, same frame. -->
+      <!-- 02 / The work, by sector: it opens with the STA chapter, right after the hero -->
       <div class="projects" id="projetos" role="region" aria-label="${esc(t.work.title)}">
         <nav class="rail" aria-label="${esc(t.work.rail)}" data-rail>
           <ol>

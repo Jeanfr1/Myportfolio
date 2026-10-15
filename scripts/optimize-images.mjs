@@ -39,7 +39,6 @@ for (const [name, file] of [['josean', '03-camadas/josean-corpo-transparente.png
   const box = boxOf(hero.layers[name].box);
   for (const w of [box.width, Math.round(box.width * 0.6)]) await write(src(file), `${name}-${w}.webp`, w, cutout, box);
 }
-for (const w of [1448, 900]) await write(src('03-camadas/portal-vidro-transparente.png'), `portal-${w}.webp`, w, cutout);
 
 // The eight sites (windows, screens, phone screens, loops, posters) come from captures of the
 // live sites: scripts/site-assets.mjs. The kit only feeds the hero, the STA chapter and the closing.
