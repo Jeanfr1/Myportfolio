@@ -5,7 +5,7 @@
 <h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, the windows of eight real client sites emerge and burst out to the sides, and the work follows, sorted by sector.</h3>
 
 <p>
-  <a href="https://josean-araujo.vercel.app"><strong>🌐 Live site</strong></a>
+  <a href="https://joseanaraujo.com"><strong>🌐 Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="#hero-animation"><strong>🎬 How the hero works</strong></a>
   &nbsp;·&nbsp;
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <a href="https://josean-araujo.vercel.app"><img src="https://img.shields.io/badge/Vercel-Live-080A0D?style=for-the-badge&logo=vercel&logoColor=white" alt="Live on Vercel" /></a>
+  <a href="https://joseanaraujo.com"><img src="https://img.shields.io/badge/Vercel-Live-080A0D?style=for-the-badge&logo=vercel&logoColor=white" alt="Live on Vercel" /></a>
   <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6" />
   <img src="https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Animation_library-none-61B8FF?style=for-the-badge" alt="No animation library" />
@@ -46,7 +46,7 @@ The work is **eight websites Josean designed, built and sold to real businesses*
 ## 🎬 The hero animation
 
 <div align="center">
-  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, the windows of eight live sites emerge and burst out to the sides, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
+  <a href="https://joseanaraujo.com"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, the windows of eight live sites emerge and burst out to the sides, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
   <sub>Scroll-scrubbed on the live site · captured at 1440 × 900</sub>
 </div>
 
@@ -253,9 +253,9 @@ Myportfolio/
 
 ## 🚀 Deployment
 
-Hosted on **Vercel** and connected to this repository: every push to `main` ships to production.
+Hosted on **Vercel** and connected to this repository: every push to `main` ships to production. The domain **joseanaraujo.com** (and `www`, which redirects to it) belongs to the Vercel project `myportfolio`; the earlier project `josean-araujo` builds the same commits, and `vercel.json` sends any address on josean-araujo.vercel.app to the same page on the domain.
 
-**Live site:** [josean-araujo.vercel.app](https://josean-araujo.vercel.app)
+**Live site:** [joseanaraujo.com](https://joseanaraujo.com)
 
 `vercel.json` pins the Vite build, redirects the earlier `/estudos/…` URLs and caches hashed assets (images, loops, reels) for a year; `.vercelignore` keeps the art kit out of the upload.
 
@@ -276,7 +276,7 @@ Each open item is marked `TODO(portfolio)` in the code.
 - [x] Social media: six reels and motion graphics from Josean's exports (the Wins piece left out, as he asked); brands shown belong to their owners, as the page says
 - [x] About: the Hewlett Packard Enterprise and Microsoft experience, as written in Josean's Technical Trainer CV (13/07/2026), his choice
 - [ ] Email, GitHub and WhatsApp: add them only once the real addresses are confirmed; LinkedIn stays the main path
-- [ ] Custom domain: change `SITE` in `src/i18n/locales.js` and run `npm run pages` (canonical, `og:url`, `hreflang` and `og:image` follow)
+- [x] Custom domain: joseanaraujo.com, set as `SITE` in `src/i18n/locales.js` (canonical, `og:url`, `hreflang` and `og:image` follow); josean-araujo.vercel.app redirects to it
 - [ ] When a live site changes or moves, check its URL on Vercel, update `url` in `src/data/projects.js` and re-run the captures
 
 <br />

@@ -16,6 +16,17 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "josean-araujo.vercel.app"
+        }
+      ],
+      "destination": "https://joseanaraujo.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/estudos/sta",
       "destination": "/projetos/sta/",
       "permanent": true

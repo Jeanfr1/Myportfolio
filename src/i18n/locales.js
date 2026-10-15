@@ -2,7 +2,7 @@
 // own folder, so every page has a real URL in each language (shareable, with its own preview).
 // `cases` is where that language's case pages live. Section ids (#projetos, #sobre…) are the
 // same in every language: the scripts look them up by id.
-export const SITE = 'https://josean-araujo.vercel.app'; // TODO(portfolio): change here once there is a final domain
+export const SITE = 'https://joseanaraujo.com'; // the domain (bought 2026-10-15); josean-araujo.vercel.app redirects here (vercel.json)
 
 export const LOCALES = [
   { code: 'pt', html: 'pt-BR', og: 'pt_BR', label: 'PT', name: 'Português', home: '/', cases: '/projetos/' },
