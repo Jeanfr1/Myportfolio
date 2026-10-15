@@ -5,8 +5,6 @@
 // - Photos and art get a few widths for srcset.
 // - Transparent layers are cut to their visible box; src/data/hero.json keeps the box, so the
 //   page can still place them on the hero art.
-// - Each study gets a "window": the top of its concept mockup at 16:10 (M&M has no mockup in
-//   the kit, so its window is the room cut-out on the study's own light grey).
 // - Favicon, touch icon and the social image are drawn from the traced JA monogram.
 import sharp from 'sharp';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -21,7 +19,6 @@ const photo = { quality: 80, effort: 6, smartSubsample: true };
 const cutout = { quality: 84, alphaQuality: 90, effort: 6, smartSubsample: true };
 
 await mkdir(OUT, { recursive: true });
-await mkdir(path.join(PUBLIC, 'studies'), { recursive: true });
 const report = [];
 const src = (p) => path.join(KIT, p);
 const boxOf = ([x0, y0, x1, y1]) => ({ left: x0, top: y0, width: x1 - x0, height: y1 - y0 });
@@ -44,42 +41,13 @@ for (const [name, file] of [['josean', '03-camadas/josean-corpo-transparente.png
 }
 for (const w of [1448, 900]) await write(src('03-camadas/portal-vidro-transparente.png'), `portal-${w}.webp`, w, cutout);
 
-// ---------- the six studies ----------
-const STUDIES = [
-  ['sta', '04-projetos/01-automotives-sta-conceito.png'],
-  ['isola', '04-projetos/02-isola-conceito.png'],
-  ['legend', '04-projetos/03-legend-nails-conceito.png'],
-  ['orhan', '04-projetos/04-orhan-barber-conceito.png'],
-  ['bayro', '04-projetos/05-bayro-cut-conceito.png'],
-];
-for (const [slug, file] of STUDIES) {
-  const meta = await sharp(src(file)).metadata();
-  const top = { left: 0, top: 0, width: meta.width, height: Math.round(meta.width / 1.6) };
-  for (const w of [1024, 640]) await write(src(file), `window-${slug}-${w}.webp`, w, photo, top);
-  // the full concept, for the study pages (opened at full size from there)
-  for (const w of [1024, 720]) await write(src(file), `concept-${slug}-${w}.webp`, w);
-  await write(src(file), `${slug}.webp`, meta.width, { ...photo, quality: 86 }, undefined, path.join(PUBLIC, 'studies'));
-}
-{
-  // M&M: the room on a light panel, same 16:10 frame as the others
-  const W = 1024;
-  const H = 640;
-  const room = await sharp(src('04-projetos/mm-ambiente-camadas.png')).extract(boxOf([204, 151, 1065, 1151])).resize({ height: 560 }).png().toBuffer();
-  const rm = await sharp(room).metadata();
-  const panel = Buffer.from(
-    `<svg width="${W}" height="${H}"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2F5F8"/><stop offset="1" stop-color="#D6DEE7"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>`,
-  );
-  const composed = await sharp(panel).composite([{ input: room, left: Math.round((W - rm.width) / 2), top: Math.round((H - rm.height) / 2) + 20 }]).png().toBuffer();
-  for (const w of [1024, 640]) await write(composed, `window-mm-${w}.webp`, w);
-}
+// The eight sites (windows, screens, phone screens, loops, posters) come from captures of the
+// live sites: scripts/site-assets.mjs. The kit only feeds the hero, the STA chapter and the closing.
 
 // ---------- chapter art ----------
 for (const w of [1672, 1000]) await write(src('04-projetos/sta-carro-scan.png'), `sta-scan-${w}.webp`, w);
 for (const [name, file, box] of [
   ['sta-engine', '04-projetos/sta-motor-transparente.png', [235, 44, 1337, 1017]],
-  ['isola-scoop', '04-projetos/isola-pistache-transparente.png', [136, 138, 1134, 1130]],
-  ['mm-room', '04-projetos/mm-ambiente-camadas.png', [204, 151, 1065, 1151]],
-  ['orhan-razor', '04-projetos/orhan-navalha-transparente.png', [59, 47, 1487, 986]],
 ]) {
   const b = boxOf(box);
   for (const w of [b.width, Math.round(b.width * 0.6)]) await write(src(file), `${name}-${w}.webp`, w, cutout, b);

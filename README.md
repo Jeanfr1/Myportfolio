@@ -2,14 +2,14 @@
 
 <img src=".github/assets/banner.png" alt="Josean Araújo — Design, desenvolvimento e IA. Visão. Código. Movimento." width="100%" />
 
-<h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, six project windows emerge, and the camera goes through one of them into the work.</h3>
+<h3>A personal portfolio, "Inside the Creative Mind": a monumental portrait opens into planes, the windows of eight real client sites emerge, and the camera goes through one of them into the work, sorted by sector.</h3>
 
 <p>
   <a href="https://josean-araujo.vercel.app"><strong>🌐 Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="#hero-animation"><strong>🎬 How the hero works</strong></a>
   &nbsp;·&nbsp;
-  <a href="#the-six-studies"><strong>🗂️ The six studies</strong></a>
+  <a href="#the-work"><strong>🗂️ The work</strong></a>
   &nbsp;·&nbsp;
   <a href="#getting-started"><strong>🛠️ Run it locally</strong></a>
 </p>
@@ -29,15 +29,15 @@
 
 ## 🚀 Overview
 
-This is the portfolio of **Josean Araújo**: design, development and AI. It follows the *Inside the Creative Mind* direction from the art kit: graphite, silver and a contained blue light; large neo-grotesque type; photography, silence and controlled movement. The visitor enters a creative universe. A **monumental portrait** opens into planes while Josean stays in the foreground, **six project windows** emerge from the same architecture, **Automotives STA** takes the centre inside a glass portal, and the camera **goes through the window** into the first study, on the very same image.
+This is the portfolio of **Josean Araújo**: design, development and AI. It follows the *Inside the Creative Mind* direction from the art kit: graphite, silver and a contained blue light; large neo-grotesque type; photography, silence and controlled movement. A **monumental portrait** opens into planes while Josean stays in the foreground, the **windows of eight live sites** emerge from the same architecture, **Automotives STA** takes the centre inside a glass portal, and the camera **goes through the window** into the work, on the very same image.
 
-From there each study keeps its own identity (the scan of a car, an orbit of flavours, an editorial stroke, a blade of light, a cut of light, a room in layers) inside one recognisable frame. Then the page slows down: who Josean is (including his years presenting and teaching technology at Microsoft in Dublin and at Hewlett Packard Enterprise in Paris), how he works, and one way to start a conversation. All of it reads in Portuguese, English or French.
+The work is **eight websites Josean designed, built and sold to real businesses**, sorted by sector: cars and motorbikes, bars, cafés and restaurants, an ice cream shop and a barbershop. Every sector opens with its name in giant type and a **cloud of particles that forms a real object from one of its sites** (the Chez TonTon bottle becomes the Cabane glass; the Rumi signature becomes the Lovinspoon sandwich). Every site arrives in its own colours, with **its opening recorded live** playing in a browser, three of its screens fanning out behind it and its phone screen in front. Then come **reels and motion graphics**, the full list, who Josean is (including his years presenting and teaching technology at Microsoft in Dublin and at Hewlett Packard Enterprise in Paris), how he works, and one way to start a conversation. All of it reads in Portuguese, English or French.
 
-- **Cinematic first impression**: a pinned 2.5D scene made of the kit's own layers, with live HTML text over it
-- **Six universes, one signature**: every study has a scene, a page of its own and a link to its published prototype
+- **Cinematic first impression**: a pinned 2.5D scene made of the kit's own layers and the live sites' first screens, with live HTML text over it
+- **The real work, shown moving**: every site is captured from production (stills and its opening as a loop), with a link to the live site and a case page of its own
+- **A motion language of its own**: giant type revealed line by line, cards that fan open, words that light up, particles that form objects (after HorizonX *MOTIF* and *Sorvine*, written from scratch)
 - **Readable without the animation**: the same content in natural order with reduced motion, on short screens and without JavaScript
 - **Three languages**: Portuguese at `/`, English at `/en/` and French at `/fr/`, every page translated in full, with a PT · EN · FR switch in the header
-- **Honest by default**: all six are presented as conceptual studies; no clients, launches, results or ratings are claimed
 
 <br />
 
@@ -46,7 +46,7 @@ From there each study keeps its own identity (the scan of a car, an orbit of fla
 ## 🎬 The hero animation
 
 <div align="center">
-  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, six project windows emerge, Automotives STA moves into a glass portal and fills the screen, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
+  <a href="https://josean-araujo.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling through the hero: the finished art hands over to its layers under a band of light, the planes drift apart, the windows of eight live sites emerge, Automotives STA moves into a glass portal and fills the screen, then the STA chapter scans the car and reveals the engine" width="100%" /></a>
   <sub>Scroll-scrubbed on the live site · captured at 1440 × 900</sub>
 </div>
 
@@ -58,9 +58,9 @@ The stage stays pinned for 360svh on wide screens and follows the five acts of t
 | :-------- | :------------------------------------------------------------------------------------------------------------------------ |
 | 0.00–0.12 | **Presence**: the finished art, the name, *Visão. Código. Movimento.*; a silver light runs along the edge of the portrait |
 | 0.12–0.32 | **Unfold**: under one band of light the art hands over to its own layers; the glass planes drift apart, the portrait recedes about 5 %, Josean barely moves |
-| 0.32–0.55 | **Reveal**: six windows emerge from behind the portrait, three in front and three further back; *Cada ideia abre um novo universo.* with the index 01–06 |
+| 0.32–0.55 | **Reveal**: eight windows, each the live site's first screen, emerge from behind the portrait, three in front and five further back; *Cada ideia abre um novo universo.* with the five sectors |
 | 0.55–0.76 | **Select**: Automotives STA moves into the glass portal; the other windows lose scale and light                          |
-| 0.76–1.00 | **Traverse**: the portal passes the camera, the window straightens to the screen and the blue gives way to the study's red |
+| 0.76–1.00 | **Traverse**: the portal passes the camera, the window straightens to the screen and the blue gives way to the site's red |
 | after     | **Car → scan → engine**: the STA chapter opens on the same image; a blue line scans the body, then the engine takes the scene behind a vertical edge |
 
 **Under the hood**
@@ -74,45 +74,47 @@ The stage stays pinned for 360svh on wide screens and follows the five acts of t
 
 <br />
 
-<a name="the-six-studies"></a>
+<a name="the-work"></a>
 
 ## 🖥️ Sections
 
 <div align="center">
-  <img src=".github/assets/desktop-sections.jpg" alt="Desktop screenshots in three languages: the Automotives STA chapter with the engine (Portuguese), the Isola chapter with its orbit (English), the two barbershops side by side (French), and the silver About section with the Hewlett Packard Enterprise and Microsoft experience" width="100%" />
+  <img src=".github/assets/desktop-sections.jpg" alt="Desktop screenshots in three languages: the Bars sector opening with its name in giant type and a bottle made of particles (Portuguese), the La Cabane à Mousse block with its opening playing in a browser and its screens fanned out (English), the reels and motion graphics wall (French), and the Rumi Cafe case page" width="100%" />
 </div>
 
 <br />
 
-| #   | Section                                   | Anchor      | Role                                                                                              |
-| :-- | :---------------------------------------- | :---------- | :------------------------------------------------------------------------------------------------ |
-| 01  | **Josean Araújo**                         | `#inicio`   | The scene, **Explorar projetos** and a direct way to the list of studies                          |
-| 02  | **Automotives STA** · Engenharia e precisão | `#sta`    | The landing of the hero: car → scan → engine, then the case                                       |
-| 03  | **Isola** · Sabores em órbita             | `#isola`    | Pistachio light; ingredients orbit the scoop, in front of it and behind it                        |
-| 04  | **Legend Nails** · O gesto como assinatura | `#legend` | Cream and olive; the orbit stretches into an editorial stroke across the concept                  |
-| 05  | **Orhan Barber** and **Bayro Cut**        | `#orhan`, `#bayro` | *Duas barbearias. Duas identidades.* A blade of light along the razor; a cut of light reveals the next portrait |
-| 06  | **M&M Cleaning** · O espaço em camadas    | `#mm`       | Light grey and blue; the room's planes recompose as architecture                                   |
-| —   | **Todos os estudos**                      | `#estudos`  | The six studies as a plain list: the way in without the animation                                  |
-| 07  | **Tecnologia começa com pessoas.**        | `#sobre`    | A silver pause: Josean at human scale (his image stays on screen), his experience at Hewlett Packard Enterprise in Paris and Microsoft in Dublin, base, path, languages, LinkedIn |
-| 08  | **Da intenção à experiência.**            | `#processo` | Entender → Dar forma → Construir e refinar, with a line that runs through the steps as you read   |
-| 09  | **Vamos criar o próximo.**                | `#contato`  | The closing portal and one path: **Conversar no LinkedIn**                                         |
+| #   | Section                                   | Anchor        | Role                                                                                              |
+| :-- | :---------------------------------------- | :------------ | :------------------------------------------------------------------------------------------------ |
+| 01  | **Josean Araújo**                         | `#inicio`     | The scene, **Explorar projetos** and a direct way to the full list                                |
+| 02  | **Automotivos** · Automotives STA, GetMOTO | `#automotivos` | The landing of the hero: car → scan → engine; then the scooter workshop in Luton               |
+| 03  | **Bares** · Chez TonTon, La Cabane à Mousse | `#bares`    | Giant type and particles: the bottle becomes the glass; then the two bars                        |
+| 04  | **Cafés & Restaurantes** · Rumi Cafe, Lovinspoon | `#cafes` | The Rumi signature becomes the Lovinspoon sandwich; then the two Dublin cafés                 |
+| 05  | **Sorveteria** · isola                    | `#sorveteria` | A scoop and cone made of particles; then the flavours in orbit                                    |
+| 06  | **Barbearia** · Bayro Cut                 | `#barbearia`  | The clipper made of particles; then the barbershop in Greve                                       |
+| 07  | **Reels & motion graphics**               | `#social`     | Six vertical pieces: muted previews while on screen, the full piece with sound in a player        |
+| —   | **Todos os projetos**                     | `#indice`     | The eight sites by sector, as a plain list: the way in without the animation                     |
+| 08  | **Tecnologia começa com pessoas.**        | `#sobre`      | A silver pause: Josean at human scale, his experience at Hewlett Packard Enterprise in Paris and Microsoft in Dublin, base, path, languages, LinkedIn |
+| 09  | **Da intenção à experiência.**            | `#processo`   | Entender → Dar forma → Construir e refinar, with a line that runs through the steps as you read   |
+| 10  | **Vamos criar o próximo.**                | `#contato`    | The closing portal and one path: **Conversar no LinkedIn**                                         |
 
-The names above are the Portuguese ones; the English and French pages carry the same sections under the same anchors. A fixed index (01–06) follows the studies on wide screens; every study also has its own page in each language (`/estudos/<slug>/`, `/en/studies/<slug>/`, `/fr/etudes/<slug>/`) with the structure the brief asks for: name and sector, the opportunity, the direction, the interface (the concept mockup, which opens at full size), the movement in up to three states, Josean's role, and the next study.
+The names above are the Portuguese ones; the English and French pages carry the same sections under the same anchors. A fixed index of the five sectors follows the work on wide screens. Every site also has a case page in each language (`/projetos/<slug>/`, `/en/work/<slug>/`, `/fr/projets/<slug>/`): its opening recorded live, the project, the direction with the site's own palette and typefaces, three desktop screens and two phone screens of the live site, the movement, what Josean did, and the next case. The earlier concept-study URLs (`/estudos/…`, `/en/studies/…`, `/fr/etudes/…`) redirect to the new pages or to the list.
 
 <br />
 
 ## 📱 Mobile first, motion optional
 
 <div align="center">
-  <img src=".github/assets/mobile-screens.jpg" alt="Mobile screenshots: the opening in Portuguese with the name above Josean and the buttons below him, the English page with the language menu open, and the French About section with the Hewlett Packard Enterprise experience" width="100%" />
+  <img src=".github/assets/mobile-screens.jpg" alt="Mobile screenshots: the Cafés & Restaurantes opening with the Rumi signature in particles (Portuguese), the isola block with its screens and phone (English), and the reels you swipe (French)" width="100%" />
 </div>
 
 <br />
 
 - On phones the vertical art keeps Josean whole: the name sits above him, the sentence and the buttons on the floor below him
-- A short pinned scene (180svh) brings three windows up and opens the STA image from its card, then the studies follow in a natural vertical flow
-- With `prefers-reduced-motion`, on short screens and without JavaScript there is no pinned section: a still hero and every study in order
-- The PT · EN · FR switch folds into a globe button with a small menu; the header fits from 320 px in all three languages
+- A short pinned scene (180svh) brings three windows up and opens the STA image from its card, then the sectors follow in a natural vertical flow; the particles stand under the text and the reels become a row you swipe
+- With `prefers-reduced-motion`, on short screens and without JavaScript there is no pinned section: a still hero, still particle objects, every site in order and no video playing on its own
+- Below 900 px the four sections live in a full-screen menu, and the PT · EN · FR switch folds into a globe button; the header fits from 320 px in all three languages
+- No video loads before it is needed: the home page opens with about 1.3 MB on a phone and none of the 8 loops or 6 reels
 - Every touch target is at least 44 px, no horizontal scroll at 375 px, and the layout holds at 200 % zoom
 
 <br />
@@ -120,12 +122,13 @@ The names above are the Portuguese ones; the English and French pages carry the 
 ## ✨ Highlights
 
 - **🎞️ One timeline, five acts**: the brief's scroll script, scrubbed with long, soft deceleration and fully reversible
-- **🌐 Each study in its own colour**: the page takes on pistachio, cream, platinum, amber light and blue as you move through the work
+- **✨ Particles that form real objects**: `scripts/emblems.py` samples 4,200 points from a cut-out of each site (density follows light, edges and local detail); `src/js/openers.js` draws them on a canvas, morphs them from one object to the next with the scroll and pushes them away from the pointer. It only runs while its sector is on screen
+- **🃏 Cards that fan open, type that assembles**: three real screens of each site open around its browser as the block comes in; sector names rise line by line in a mask; the manifesto lights up word by word (`src/js/kinetic.js`)
+- **🎥 The sites' own motion, recorded**: `scripts/capture/` scrubs each scroll-driven hero frame by frame and records the timed openings live, then builds seamless loops (forward and back, or a soft dissolve); they play only on screen
+- **🌐 Each site in its own colours**: every block takes the site's ground, ink and accent from its README, with deeper label and button colours wherever the accent would fall under 4.5:1
 - **🗣️ Three languages, real pages**: each language has its own URLs, `lang`, title, description and social preview, linked by `hreflang`; on a first visit the root follows the browser's language (any language other than Portuguese or French gets English), and a choice made in the switch is remembered and keeps the section you were reading
-- **🗂️ One source for 21 pages**: `npm run pages` writes the three home pages and the 18 study pages from two templates (`scripts/pages/`), the dictionaries in `src/i18n/` and `src/data/projects.js`, so names, sectors and links live in one place
-- **♿ Accessible by construction**: skip link, real headings, labelled navigation, visible focus, captions read in order, hidden-until-animated states that only apply once the code that reveals them runs
-- **🖼️ Image pipeline**: the kit's PNGs stay the source of truth; WebP sizes, cut layers, project windows, favicon and the social image come from `npm run images`
-- **✒️ Sharp monogram**: the JA mark is traced from the kit's PNG into an SVG (`scripts/trace-logo.py`)
+- **🗂️ One source for 27 pages**: `npm run pages` writes the three home pages and the 24 case pages from two templates (`scripts/pages/`), the dictionaries in `src/i18n/` and `src/data/projects.js`
+- **♿ Accessible by construction**: skip link, real headings, labelled navigation, a menu that holds focus and closes with Escape, a native `<dialog>` for the player, visible focus, hidden-until-animated states that only apply once the code that reveals them runs
 
 <br />
 
@@ -136,8 +139,8 @@ The names above are the Portuguese ones; the English and French pages carry the 
 
 ### Why this stack?
 
-- **Vite + plain JavaScript**: a portfolio doesn't need a framework runtime; the pages are static HTML with small, focused modules (about 9 KB of JavaScript, gzipped)
-- **No animation library**: the hero is a pure function of one scroll value; a `requestAnimationFrame` loop, CSS transforms and a few CSS custom properties are all it needs
+- **Vite + plain JavaScript**: a portfolio doesn't need a framework runtime; the pages are static HTML with small, focused modules (about 15 KB of JavaScript, gzipped; each sector's particle points load on their own, about 21 KB)
+- **No animation library**: the hero is a pure function of one scroll value, the particles are a hand-written canvas engine, and the rest is CSS driven by a few custom properties (`--p`, `--o`, `--wp`)
 - **sharp + OpenCV for the assets**: cutting, registering and tracing the kit's images happens once, at build time, not in the browser
 - **Self-hosted Space Grotesk and Inter**: the type the brief suggests, with no third-party font requests
 
@@ -188,6 +191,16 @@ npm run images
 # Rewrite every page in PT, EN and FR from the templates and dictionaries (dev and build run it first)
 npm run pages
 
+# Re-sample the particle emblems from the cut-outs in design/emblems/ (Python 3, numpy, Pillow)
+python3 scripts/emblems.py
+
+# Re-capture the eight live sites and the social videos (Playwright with Chrome, ffmpeg), then write the web assets
+node scripts/capture/stills.mjs <caps>
+node scripts/capture/loops.mjs <frames> scrub && node scripts/capture/loops.mjs <frames> live
+python3 scripts/capture/build-loops.py <frames> <loops>
+bash scripts/capture/social.sh <exports> <social>
+node scripts/site-assets.mjs <caps> <loops> <social>
+
 # Optional, Python 3 (opencv-python, numpy, Pillow): re-register the hero layers, re-trace the monogram
 python3 scripts/register-hero.py
 python3 scripts/trace-logo.py
@@ -199,34 +212,41 @@ python3 scripts/trace-logo.py
 
 ```
 Myportfolio/
-├── index.html                    # PT: hero → six studies → all studies → about → process → contact → footer
+├── index.html                    # PT: hero → work by sector → social → all projects → about → process → contact
 ├── en/index.html · fr/index.html # The same page in English and French
-├── estudos/<slug>/               # The six study pages in Portuguese
-├── en/studies/<slug>/ · fr/etudes/<slug>/  # …in English and French (all pages written by npm run pages)
+├── projetos/<slug>/              # The eight case pages in Portuguese
+├── en/work/<slug>/ · fr/projets/<slug>/  # …in English and French (all 27 pages written by npm run pages)
 ├── src/
-│   ├── main.js · study.js        # Entries: fonts, styles, module init
-│   ├── styles/                   # main.css (tokens, hero modes, chapters, language switch) · study.css
+│   ├── main.js · case.js         # Entries: fonts, styles, module init
+│   ├── styles/                   # main.css (tokens, hero, STA, about…) · work.css (sectors, sites, social, menu) · case.css
 │   ├── i18n/
 │   │   ├── locales.js            # The three languages, their URLs and the site address
-│   │   └── pt.js · en.js · fr.js # Every text of the site, including the six studies and the About experience
+│   │   └── pt.js · en.js · fr.js # Every text: sectors, the eight cases, the reels, the About experience
 │   ├── data/
-│   │   ├── projects.js           # The six studies: names, accents, prototype links, concept sizes
+│   │   ├── projects.js           # The eight sites (live URL, colours, type, palette), the five sectors, the six reels
+│   │   ├── emblems/*.json        # Particle points of each emblem (written by scripts/emblems.py)
 │   │   └── hero.json             # Layer registration on the hero art (generated by register-hero.py)
-│   ├── assets/brand/ja.svg       # The traced JA monogram
+│   ├── assets/img · assets/video # WebP stills and posters of the live sites; their loops and the reels (H.264)
 │   └── js/
-│       ├── hero.js               # The five acts: art → layers, planes, windows, portal, traverse
+│       ├── hero.js               # The five acts: art → layers, planes, eight windows, portal, traverse
 │       ├── sta.js                # Car → scan → engine
-│       ├── scenes.js             # Scroll progress for the other studies' gestures
-│       ├── lang.js               # PT · EN · FR switch: phone menu, remembered choice, same section
-│       ├── rail.js · header.js · anchors.js · reveal.js · motion.js
-├── josean-portfolio-ultrapremium/ # The art kit: references, concepts, hero, layers, projects, roteiros, tokens
+│       ├── openers.js            # Sector openers: pin progress and the particle canvas
+│       ├── kinetic.js · scenes.js # Words that light up · scroll progress for the fans and titles
+│       ├── loops.js · social.js  # Site loops on screen · the reels wall and its player
+│       ├── menu.js · lang.js     # The phone menu · the PT · EN · FR switch
+│       └── rail.js · header.js · anchors.js · reveal.js · motion.js
+├── design/emblems/               # The cut-outs the particles are made of, one per site
+├── josean-portfolio-ultrapremium/ # The art kit: references, concepts, hero, layers, roteiros, tokens
 ├── scripts/
-│   ├── optimize-images.mjs       # PNG → WebP, cut layers, project windows, favicon, OG image
-│   ├── build-pages.mjs           # Writes the 21 pages from the templates in pages/ (home.mjs, study.mjs, shared.mjs)
+│   ├── build-pages.mjs · pages/  # The page builder and its templates (home.mjs, case.mjs, shared.mjs)
+│   ├── capture/                  # Stills, loops and reels from the live sites and the exports
+│   ├── site-assets.mjs           # Captures → WebP sizes, posters, loops and reels in src/assets
+│   ├── emblems.py                # Cut-outs → particle points
+│   ├── optimize-images.mjs       # Kit PNG → WebP for the hero, STA and closing; favicon, OG image
 │   ├── register-hero.py          # SIFT registration of the hero layers
 │   └── trace-logo.py             # JA monogram → SVG
-├── public/                       # Favicon, touch icon, Open Graph image, full-size concepts
-└── vercel.json                   # Vite build, one-year cache for hashed assets
+├── public/                       # Favicon, touch icon, Open Graph image
+└── vercel.json                   # Vite build, redirects from the old study URLs, one-year cache for hashed assets
 ```
 
 <br />
@@ -237,7 +257,7 @@ Hosted on **Vercel** and connected to this repository: every push to `main` ship
 
 **Live site:** [josean-araujo.vercel.app](https://josean-araujo.vercel.app)
 
-`vercel.json` pins the Vite build and caches hashed assets for a year; `.vercelignore` keeps the art kit out of the upload.
+`vercel.json` pins the Vite build, redirects the earlier `/estudos/…` URLs and caches hashed assets (images, loops, reels) for a year; `.vercelignore` keeps the art kit out of the upload.
 
 | Setting          | Value           |
 | :--------------- | :-------------- |
@@ -251,14 +271,13 @@ Hosted on **Vercel** and connected to this repository: every push to `main` ship
 
 Each open item is marked `TODO(portfolio)` in the code.
 
-- [ ] Approve the hero sentence (from the roteiro) and review the English and French copy (`src/i18n/en.js`, `src/i18n/fr.js`)
+- [ ] Approve the hero sentence (from the roteiro) and review the English and French copy (`src/i18n/en.js`, `src/i18n/fr.js`), including the eight cases
+- [x] The work: eight sites sold to real businesses (Josean's list), by sector; *Cafés & Restaurantes* as one sector, as he chose; isola added as the only ice cream shop
+- [x] Social media: six reels and motion graphics from Josean's exports (the Wins piece left out, as he asked); brands shown belong to their owners, as the page says
 - [x] About: the Hewlett Packard Enterprise and Microsoft experience, as written in Josean's Technical Trainer CV (13/07/2026), his choice
-- [ ] Confirm that the six **published prototypes** should be linked from the portfolio (`prototype` in `src/data/projects.js`; `null` hides a link)
 - [ ] Email, GitHub and WhatsApp: add them only once the real addresses are confirmed; LinkedIn stays the main path
-- [x] English and French versions translating navigation, studies and contact in full
-- [ ] A concept mockup for M&M Cleaning (the kit has the room, not the page)
 - [ ] Custom domain: change `SITE` in `src/i18n/locales.js` and run `npm run pages` (canonical, `og:url`, `hreflang` and `og:image` follow)
-- [ ] Optional: a produced 3D model or frame sequence for a truly volumetric camera, as the kit notes
+- [ ] When a live site changes or moves, check its URL on Vercel, update `url` in `src/data/projects.js` and re-run the captures
 
 <br />
 
@@ -267,6 +286,8 @@ Each open item is marked `TODO(portfolio)` in the code.
 - The *Inside the Creative Mind* art kit: direction, concepts, layers and roteiros
 - **[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)** by Florian Karsten and **[Inter](https://rsms.me/inter/)** by Rasmus Andersson (both OFL)
 - **[sharp](https://sharp.pixelplumbing.com)** and **[OpenCV](https://opencv.org)** for the asset pipeline
+- **[Playwright](https://playwright.dev)** and **[FFmpeg](https://ffmpeg.org)** for the captures of the live sites and the loops
+- The motion language of the work and the social wall takes its cue from HorizonX's *[MOTIF](https://horizonx.so/explore/motif)* and *[Sorvine](https://horizonx.so/explore/sorvine)*; the code here is written from scratch
 - **[Vite](https://vite.dev)** and **[Vercel](https://vercel.com)**
 
 <br />
@@ -277,5 +298,5 @@ Each open item is marked `TODO(portfolio)` in the code.
   <img src="public/apple-touch-icon.png" width="48" height="48" alt="" />
   <p><strong>Visão. Código. Movimento.</strong></p>
   <p>Built with ❤️ by <a href="https://github.com/Jeanfr1">Jean</a></p>
-  <sub>© 2026 Josean Araújo. The six projects shown are conceptual design studies.</sub>
+  <sub>© 2026 Josean Araújo. Websites created for real businesses.</sub>
 </div>

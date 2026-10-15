@@ -5,7 +5,8 @@ import { LINKEDIN } from '../../src/data/projects.js';
 export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export const img = (name) => `/src/assets/img/${name}.webp`;
 export const homeUrl = (loc) => loc.home;
-export const studyUrl = (loc, slug) => `${loc.studies}${slug}/`;
+export const caseUrl = (loc, slug) => `${loc.cases}${slug}/`;
+export const video = (name) => `/src/assets/video/${name}.mp4`;
 export { LINKEDIN, LOCALES };
 
 // The root page is the only one that guesses: a first visit (nothing stored, not coming from
@@ -60,6 +61,16 @@ export function head({ loc, t, title, description, ogType, ogTitle, ogDescriptio
 ${extra}  </head>`;
 }
 
+// icons every page uses (header, menu, links); pages add their own to the same sprite
+export const ICONS = [
+  '<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>',
+  '<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6" /></symbol>',
+  '<symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" /></symbol>',
+  '<symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></symbol>',
+  '<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" /></symbol>',
+  '<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>',
+].join('\n      ');
+
 export const GLOBE = '<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.3 2.4 3.4 5.2 3.4 8.5s-1.1 6.1-3.4 8.5c-2.3-2.4-3.4-5.2-3.4-8.5s1.1-6.1 3.4-8.5Z" /></symbol>';
 
 // Language switch: PT · EN · FR inline on wide screens, a small menu behind the globe on phones.
@@ -82,8 +93,18 @@ export function langSwitch(loc, t, alternates) {
 
 export function header({ loc, t, alternates, study = false }) {
   const base = study ? homeUrl(loc) : '';
-  const nav = (id, label) =>
-    study ? `<li><a href="${base}#${id}">${esc(label)}</a></li>` : `<li><a href="#${id}" data-nav="${id}">${esc(label)}</a></li>`;
+  const items = [
+    ['projetos', t.nav.projects],
+    ['social', t.nav.social],
+    ['sobre', t.nav.about],
+    ['contato', t.nav.contact],
+  ];
+  const nav = items
+    .map(([id, label]) => (study ? `<li><a href="${base}#${id}">${esc(label)}</a></li>` : `<li><a href="#${id}" data-nav="${id}">${esc(label)}</a></li>`))
+    .join('\n            ');
+  const menu = items
+    .map(([id, label], i) => `<li><a href="${base}#${id}" data-menu-link><span>0${i + 1}</span> ${esc(label)}</a></li>`)
+    .join('\n              ');
   return `<header class="site-header${study ? ' is-solid' : ''}"${study ? '' : ' data-header'}>
       <div class="wrap header-inner">
         <a class="brand" href="${study ? homeUrl(loc) : '#inicio'}" aria-label="${esc(study ? t.nav.homePage : t.nav.home)}">
@@ -92,12 +113,22 @@ export function header({ loc, t, alternates, study = false }) {
         </a>
         <nav class="main-nav" aria-label="${esc(t.nav.label)}">
           <ul>
-            ${nav('projetos', t.nav.projects)}
-            ${nav('sobre', t.nav.about)}
-            ${nav('contato', t.nav.contact)}
+            ${nav}
           </ul>
         </nav>
         ${langSwitch(loc, t, alternates)}
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+          <span class="sr-only" data-open="${esc(t.nav.open)}" data-close="${esc(t.nav.close)}">${esc(t.nav.open)}</span>
+        </button>
+      </div>
+      <div class="menu" id="site-menu" data-menu>
+        <nav class="wrap menu-inner" aria-label="${esc(t.nav.label)}">
+          <ol class="menu-links">
+              ${menu}
+          </ol>
+          <a class="menu-foot" href="${LINKEDIN}" target="_blank" rel="noopener">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> ${esc(t.newTab)}</span></a>
+        </nav>
       </div>
     </header>`;
 }
@@ -111,6 +142,7 @@ export function footer({ loc, t, note, study = false }) {
         </p>
         <ul class="footer-links">
           <li><a href="${study ? homeUrl(loc) : ''}#projetos">${esc(t.footer.projects)}</a></li>
+          <li><a href="${study ? homeUrl(loc) : ''}#social">Social</a></li>
           <li><a href="${LINKEDIN}" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> ${esc(t.newTab)}</span></a></li>
         </ul>
         <p class="footer-note">© <span data-year>2026</span> Josean Araújo. ${esc(note)}</p>

@@ -5,8 +5,8 @@
 //   0.00–0.12  presence   the finished art: Josean, the monumental portrait, the name
 //   0.12–0.32  unfold     the art hands over to its own layers; the glass planes behind the
 //                         face drift apart, the portrait recedes ~5 %, Josean barely moves
-//   0.32–0.55  reveal     six project windows emerge from behind the portrait, three in front
-//                         and three further back
+//   0.32–0.55  reveal     eight site windows emerge from behind the portrait, three in front
+//                         and five further back
 //   0.55–0.76  select     Automotives STA takes the centre inside the glass portal; the other
 //                         windows lose scale and light
 //   0.76–1.00  traverse   the window grows to fill the screen, the blue gives way to the
@@ -64,19 +64,21 @@ const T = {
   },
 };
 
-// ---------- the six windows ----------
-// Reveal state in fractions of the stage: centre, width (× W), yaw (perspective: >0 shortens the
-// right edge) and plane (front / back). Laid out like keyframe-universo-aberto.png, kept clear of
-// Josean and of the face.
+// ---------- the eight windows ----------
+// One per site, each showing the live site's first screen. Reveal state in fractions of the stage:
+// centre, width (× W), yaw (perspective: >0 shortens the right edge) and plane (front / back).
+// Laid out like keyframe-universo-aberto.png, kept clear of Josean and of the face.
 const WINDOWS = [
   { slug: 'sta', scroll: { x: 0.2, y: 0.32, w: 0.27, yaw: 0.14, front: true }, compact: { x: 0.5, y: 0.6, w: 0.86, yaw: 0, front: true } },
   { slug: 'isola', scroll: { x: 0.12, y: 0.6, w: 0.15, yaw: 0.08, front: true }, compact: { x: 0.27, y: 0.3, w: 0.44, yaw: 0.1, front: false } },
-  { slug: 'legend', scroll: { x: 0.33, y: 0.58, w: 0.15, yaw: -0.06, front: true }, compact: { x: 0.73, y: 0.33, w: 0.44, yaw: -0.1, front: false } },
+  { slug: 'cabane', scroll: { x: 0.33, y: 0.58, w: 0.15, yaw: -0.06, front: true }, compact: { x: 0.73, y: 0.33, w: 0.44, yaw: -0.1, front: false } },
   { slug: 'bayro', scroll: { x: 0.43, y: 0.18, w: 0.11, yaw: 0.1, front: false }, compact: null },
-  { slug: 'orhan', scroll: { x: 0.93, y: 0.2, w: 0.12, yaw: -0.14, front: false }, compact: null },
-  { slug: 'mm', scroll: { x: 0.93, y: 0.62, w: 0.12, yaw: -0.14, front: false }, compact: null },
+  { slug: 'rumi', scroll: { x: 0.93, y: 0.2, w: 0.12, yaw: -0.14, front: false }, compact: null },
+  { slug: 'getmoto', scroll: { x: 0.93, y: 0.62, w: 0.12, yaw: -0.14, front: false }, compact: null },
+  { slug: 'tonton', scroll: { x: 0.08, y: 0.16, w: 0.1, yaw: 0.12, front: false }, compact: null },
+  { slug: 'lovinspoon', scroll: { x: 0.8, y: 0.86, w: 0.11, yaw: -0.1, front: false }, compact: null },
 ];
-const STAGGER = [0, 0.02, 0.04, 0.06, 0.08, 0.1];
+const STAGGER = [0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.07, 0.11];
 
 // glass planes behind the face, in hero-art pixels (they echo the architecture of the art)
 const PLANES = [

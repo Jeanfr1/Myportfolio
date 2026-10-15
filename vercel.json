@@ -6,7 +6,119 @@
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/estudos/sta",
+      "destination": "/projetos/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/sta/",
+      "destination": "/projetos/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/isola",
+      "destination": "/projetos/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/isola/",
+      "destination": "/projetos/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/bayro",
+      "destination": "/projetos/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/bayro/",
+      "destination": "/projetos/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/:slug*",
+      "destination": "/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/sta",
+      "destination": "/en/work/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/sta/",
+      "destination": "/en/work/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/isola",
+      "destination": "/en/work/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/isola/",
+      "destination": "/en/work/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/bayro",
+      "destination": "/en/work/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/bayro/",
+      "destination": "/en/work/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/:slug*",
+      "destination": "/en/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/sta",
+      "destination": "/fr/projets/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/sta/",
+      "destination": "/fr/projets/sta/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/isola",
+      "destination": "/fr/projets/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/isola/",
+      "destination": "/fr/projets/isola/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/bayro",
+      "destination": "/fr/projets/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/bayro/",
+      "destination": "/fr/projets/bayro/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/:slug*",
+      "destination": "/fr/#indice",
+      "permanent": true
     }
   ]
 }

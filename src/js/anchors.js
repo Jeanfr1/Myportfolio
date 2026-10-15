@@ -5,11 +5,11 @@ import { media } from './motion.js';
 export function scrollToTarget(el, { focus = true } = {}) {
   if (!el) return;
   const header = document.querySelector('[data-header]')?.offsetHeight || 0;
-  const pinned = el.matches('.chapter, .projects');
+  const pinned = el.matches('.chapter, .projects, .sector');
   let top = el.id === 'inicio' ? 0 : Math.round(el.getBoundingClientRect().top + window.scrollY - (pinned ? 0 : header));
   // the STA chapter shows its text once the scene settles: land there, not on its first frame
   const sta = document.querySelector('[data-sta-track]');
-  if ((el.id === 'projetos' || el.id === 'sta') && sta && document.documentElement.classList.contains('hero-live')) {
+  if (['projetos', 'automotivos', 'sta'].includes(el.id) && sta && document.documentElement.classList.contains('hero-live')) {
     top = Math.round(sta.getBoundingClientRect().top + window.scrollY + 0.2 * (sta.offsetHeight - window.innerHeight));
   }
   const distance = Math.abs(top - window.scrollY);

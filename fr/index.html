@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Josean Araújo · Design, développement et IA</title>
-    <meta name="description" content="Portfolio de Josean Araújo : des expériences numériques qui relient identité, technologie et personnes. Six études conceptuelles de design, d’interface et de mouvement." />
+    <meta name="description" content="Portfolio de Josean Araújo : des sites pour des bars, des cafés, un glacier, un barbier et des garages auto et moto, ainsi que des reels et du motion design." />
     <meta name="theme-color" content="#080A0D" />
     <link rel="canonical" href="https://josean-araujo.vercel.app/fr/" />
     <link rel="alternate" hreflang="pt" href="https://josean-araujo.vercel.app/" />
@@ -19,7 +19,7 @@
     <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:site_name" content="Josean Araújo" />
     <meta property="og:title" content="Josean Araújo · Inside the Creative Mind" />
-    <meta property="og:description" content="Vision. Code. Mouvement. Des expériences numériques qui relient identité, technologie et personnes." />
+    <meta property="og:description" content="Vision. Code. Mouvement. Des sites avec scène, rythme et identité pour de vrais commerces, et des vidéos qui arrêtent le scroll." />
     <meta property="og:image" content="https://josean-araujo.vercel.app/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -68,8 +68,11 @@
 
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
       <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6" /></symbol>
       <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" /></symbol>
       <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
       <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.5 9.5h3v10h-3zM6 4.6a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4ZM10.5 9.5h2.9v1.4c.5-.9 1.7-1.7 3.4-1.7 3.2 0 3.7 2 3.7 4.7v5.6h-3v-5c0-1.2 0-2.7-1.7-2.7s-2 1.3-2 2.6v5.1h-3.3z" /></symbol>
       <symbol id="i-listen" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 8v4.5l3 1.8" /></symbol>
       <symbol id="i-shape" viewBox="0 0 24 24"><path d="M4 20 12 4l8 16H4Z" /><path d="M8.3 12h7.4" /></symbol>
@@ -86,6 +89,7 @@
         <nav class="main-nav" aria-label="Principale">
           <ul>
             <li><a href="#projetos" data-nav="projetos">Projets</a></li>
+            <li><a href="#social" data-nav="social">Social</a></li>
             <li><a href="#sobre" data-nav="sobre">À propos</a></li>
             <li><a href="#contato" data-nav="contato">Contact</a></li>
           </ul>
@@ -101,11 +105,26 @@
             <li><a href="/fr/" hreflang="fr" lang="fr" data-lang-link="fr" aria-current="page"><span class="lang-code">FR</span> <span class="lang-name">Français</span></a></li>
           </ul>
         </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+          <span class="sr-only" data-open="Ouvrir le menu" data-close="Fermer le menu">Ouvrir le menu</span>
+        </button>
+      </div>
+      <div class="menu" id="site-menu" data-menu>
+        <nav class="wrap menu-inner" aria-label="Principale">
+          <ol class="menu-links">
+              <li><a href="#projetos" data-menu-link><span>01</span> Projets</a></li>
+              <li><a href="#social" data-menu-link><span>02</span> Social</a></li>
+              <li><a href="#sobre" data-menu-link><span>03</span> À propos</a></li>
+              <li><a href="#contato" data-menu-link><span>04</span> Contact</a></li>
+          </ol>
+          <a class="menu-foot" href="https://www.linkedin.com/in/josean-araujo-3ba63b17b/" target="_blank" rel="noopener">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg><span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
+        </nav>
       </div>
     </header>
 
     <!-- 01 / Hero, "Inside the Creative Mind". Scroll mode: the stage stays pinned while the portrait
-         opens into planes, six project windows emerge, Automotives STA takes the portal and the
+         opens into planes, eight site windows emerge, Automotives STA takes the portal and the
          camera goes through it. The name, the text and the links are live HTML. -->
     <div class="hero-track" id="inicio" data-hero-track>
       <section class="hero" aria-labelledby="hero-title">
@@ -153,7 +172,7 @@
                   <span>Explorer les projets</span>
                   <svg class="icon" aria-hidden="true"><use href="#i-arrow-down" /></svg>
                 </a>
-                <a class="btn btn--quiet" href="#estudos">Voir toutes les études</a>
+                <a class="btn btn--quiet" href="#indice">Voir tous les projets</a>
               </div>
             </div>
           </div>
@@ -163,20 +182,19 @@
             <p class="eyebrow">Vision en mouvement</p>
             <p class="caption-title">Chaque idée ouvre un nouvel univers.</p>
             <ol class="caption-index">
-              <li><a href="#sta"><span>01</span> Automotives STA</a></li>
-              <li><a href="#isola"><span>02</span> Isola</a></li>
-              <li><a href="#legend"><span>03</span> Legend Nails</a></li>
-              <li><a href="#orhan"><span>04</span> Orhan Barber</a></li>
-              <li><a href="#bayro"><span>05</span> Bayro Cut</a></li>
-              <li><a href="#mm"><span>06</span> M&amp;M Cleaning</a></li>
+              <li><a href="#automotivos"><span>01</span> Automobile</a></li>
+              <li><a href="#bares"><span>02</span> Bars</a></li>
+              <li><a href="#cafes"><span>03</span> Cafés &amp; Restaurants</a></li>
+              <li><a href="#sorveteria"><span>04</span> Glacier</a></li>
+              <li><a href="#barbearia"><span>05</span> Barbier</a></li>
             </ol>
           </div>
           <div class="wrap hero-caption hero-caption--select" data-caption="select">
-            <p class="eyebrow"><span>01 / 06</span> Étude conceptuelle</p>
+            <p class="eyebrow"><span>01 / 08</span> Automobile</p>
             <p class="caption-title">Automotives STA</p>
             <p class="caption-sub">Ingénierie et précision</p>
-            <a class="btn btn--line" href="/fr/etudes/sta/">
-              <span>Explorer l’étude</span>
+            <a class="btn btn--line" href="/fr/projets/sta/">
+              <span>Voir l’étude de cas</span>
               <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
             </a>
           </div>
@@ -188,22 +206,21 @@
     </div>
 
     <main id="conteudo" class="content" tabindex="-1" data-content>
-      <!-- 02–03 / Projects. The hero lands in the first study: same image, same frame. -->
-      <section class="projects" id="projetos" aria-labelledby="projetos-title">
-        <h2 class="sr-only" id="projetos-title">Travaux sélectionnés</h2>
-
-        <nav class="rail" aria-label="Index des études" data-rail>
+      <!-- 02 / The work, by sector. The hero lands in the first site: same image, same frame. -->
+      <div class="projects" id="projetos" role="region" aria-label="Projets par secteur">
+        <nav class="rail" aria-label="Secteurs" data-rail>
           <ol>
-            <li><a href="#sta" data-rail-link="sta" data-name="Automotives STA"><span>01</span> Automotives STA</a></li>
-            <li><a href="#isola" data-rail-link="isola" data-name="Isola"><span>02</span> Isola</a></li>
-            <li><a href="#legend" data-rail-link="legend" data-name="Legend Nails"><span>03</span> Legend Nails</a></li>
-            <li><a href="#orhan" data-rail-link="orhan" data-name="Orhan Barber"><span>04</span> Orhan Barber</a></li>
-            <li><a href="#bayro" data-rail-link="bayro" data-name="Bayro Cut"><span>05</span> Bayro Cut</a></li>
-            <li><a href="#mm" data-rail-link="mm" data-name="M&amp;M Cleaning"><span>06</span> M&amp;M Cleaning</a></li>
+            <li><a href="#automotivos" data-rail-link="automotivos" data-name="Automobile"><span>01</span> Automobile</a></li>
+            <li><a href="#bares" data-rail-link="bares" data-name="Bars"><span>02</span> Bars</a></li>
+            <li><a href="#cafes" data-rail-link="cafes" data-name="Cafés &amp; Restaurants"><span>03</span> Cafés &amp; Restaurants</a></li>
+            <li><a href="#sorveteria" data-rail-link="sorveteria" data-name="Glacier"><span>04</span> Glacier</a></li>
+            <li><a href="#barbearia" data-rail-link="barbearia" data-name="Barbier"><span>05</span> Barbier</a></li>
           </ol>
         </nav>
 
-        <!-- 01 · Automotives STA: car -> scan -> engine (crossfade, short scale, vertical mask) -->
+        <section class="sector sector--automotivos" id="automotivos" aria-labelledby="automotivos-title" data-sector>
+        <h2 class="sr-only" id="automotivos-title">Automobile</h2>
+        <!-- 01 · Automotives STA: the hero lands here. Car -> scan -> engine (crossfade, short scale, vertical mask) -->
         <article class="chapter chapter--sta" id="sta" aria-labelledby="sta-title" data-chapter="sta">
           <div class="sta-track" data-sta-track>
             <div class="sta-stage" data-sta-stage>
@@ -218,20 +235,19 @@
               </div>
               <div class="wrap sta-copy">
                 <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>01 / 06</span> Étude conceptuelle</p>
+              <p class="eyebrow case-kicker"><span>01 / 08</span> Automobile</p>
               <h3 class="case-title" id="sta-title">Automotives STA</h3>
               <p class="case-sector">Garage automobile · St Albans, Royaume-Uni</p>
               <p class="case-lead">De l’extérieur à l’ingénierie qui porte le mouvement.</p>
-              <p class="case-role"><span>Contribution</span> Direction artistique, interface et narration du scan et du moteur.</p>
               <div class="actions">
-                <a class="btn btn--primary" href="/fr/etudes/sta/">
-                  <span>Explorer l’étude</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
-                </a>
-                <a class="btn btn--quiet" href="https://automotives-sta-st-albans.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
+                <a class="btn btn--site" href="https://automotives-sta-st-albans.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
                   <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/sta/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
                 </a>
               </div>
             </div>
@@ -244,245 +260,562 @@
             </div>
           </div>
         </article>
-
-        <!-- 02 · Isola: a round reflection becomes an orbit -->
-        <article class="chapter chapter--light chapter--isola" id="isola" aria-labelledby="isola-title" data-chapter="isola" data-scene>
-          <div class="wrap chapter-grid">
+        <article class="site site--dark" id="getmoto" aria-labelledby="getmoto-title" data-scene style="--s-bg: #04070D; --s-ink: #FFFFFF; --s-accent: #3D8BFF; --s-label: #3D8BFF; --s-btn: #3D8BFF">
+          <div class="wrap site-grid">
             <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>02 / 06</span> Étude conceptuelle</p>
-              <h3 class="case-title" id="isola-title">Isola</h3>
-              <p class="case-sector">Glacier · Mosede Havn, Danemark</p>
-              <p class="case-lead">Un univers de saveurs en orbite.</p>
-              <p class="case-role"><span>Contribution</span> Direction artistique, interface et changement de parfum.</p>
+              <p class="eyebrow case-kicker"><span>02 / 08</span> Automobile</p>
+              <h3 class="case-title" id="getmoto-title">GetMOTO</h3>
+              <p class="case-sector">Réparation et location de motos · Luton, Royaume-Uni</p>
+              <p class="case-lead">Un scooter qui se démonte pièce par pièce au fil du défilement.</p>
+              <p class="case-text">Un site d’une page pour un atelier de motos et scooters à Luton : réparations, programmation de clés, préparation au contrôle technique (MOT) et location. L’ouverture est une séquence de 150 images où le scooter se démonte au défilement ; la location et les rendez-vous ouvrent WhatsApp avec la demande déjà remplie.</p>
+              <ul class="case-tags"><li>Séquence de 150 images</li><li>GSAP ScrollTrigger</li><li>Location via WhatsApp</li></ul>
               <div class="actions">
-                <a class="btn btn--dark" href="/fr/etudes/isola/">
-                  <span>Explorer l’étude</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
-                </a>
-                <a class="btn btn--quiet" href="https://isola-mosede.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
+                <a class="btn btn--site" href="https://getmoto-uk.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
                   <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
                   <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
                 </a>
-              </div>
-            </div>
-            <div class="isola-visual" aria-hidden="true">
-              <span class="orbit-wrap orbit-wrap--back"><span class="orbit"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <img class="isola-scoop" src="/src/assets/img/isola-scoop-998.webp" srcset="/src/assets/img/isola-scoop-599.webp 599w, /src/assets/img/isola-scoop-998.webp 998w" sizes="(min-width: 1024px) 34vw, 70vw" width="998" height="992" alt="" loading="lazy" decoding="async" />
-              <span class="orbit-wrap orbit-wrap--front"><span class="orbit"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-              <figure class="shot shot--isola">
-                <img src="/src/assets/img/window-isola-640.webp" srcset="/src/assets/img/window-isola-640.webp 640w, /src/assets/img/window-isola-1024.webp 1024w" sizes="(min-width: 1024px) 22vw, 60vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- 03 · Legend Nails: the orbit stretches into an editorial stroke -->
-        <article class="chapter chapter--light chapter--legend" id="legend" aria-labelledby="legend-title" data-chapter="legend" data-scene>
-          <div class="wrap chapter-grid chapter-grid--flip">
-            <div class="legend-visual" aria-hidden="true">
-              <figure class="shot shot--tall">
-                <img src="/src/assets/img/concept-legend-720.webp" srcset="/src/assets/img/concept-legend-720.webp 720w, /src/assets/img/concept-legend-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, 80vw" width="720" height="1080" alt="" loading="lazy" decoding="async" />
-              </figure>
-              <svg class="stroke" viewBox="0 0 600 260"><path pathLength="1" d="M8 196C96 70 214 40 300 118s170 104 284-60" /></svg>
-            </div>
-            <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>03 / 06</span> Étude conceptuelle</p>
-              <h3 class="case-title" id="legend-title">Legend Nails</h3>
-              <p class="case-sector">Manucure et nail art · St Albans, Royaume-Uni</p>
-              <p class="case-lead">Le geste comme signature.</p>
-              <p class="case-role"><span>Contribution</span> Direction éditoriale, interface et narration de la manucure.</p>
-              <div class="actions">
-                <a class="btn btn--dark" href="/fr/etudes/legend/">
-                  <span>Explorer l’étude</span>
+                <a class="btn btn--quiet" href="/fr/projets/getmoto/">
+                  <span>Voir l’étude de cas</span>
                   <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
                 </a>
-                <a class="btn btn--quiet" href="https://legend-nails-st-albans.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
-                </a>
               </div>
             </div>
-          </div>
-        </article>
-
-        <!-- 04–05 · the two barbershops, side by side: two identities for the same craft -->
-        <div class="duo" data-scene>
-          <header class="wrap duo-head" data-reveal>
-            <p class="eyebrow">04 — 05</p>
-            <p class="duo-title">Deux barbiers. Deux identités.</p>
-          </header>
-          <div class="wrap duo-grid">
-            <article class="chapter chapter--orhan" id="orhan" aria-labelledby="orhan-title" data-chapter="orhan">
-              <div class="duo-visual orhan-visual" aria-hidden="true">
-                <img class="orhan-razor" src="/src/assets/img/orhan-razor-857.webp" srcset="/src/assets/img/orhan-razor-857.webp 857w, /src/assets/img/orhan-razor-1428.webp 1428w" sizes="(min-width: 1024px) 40vw, 90vw" width="857" height="564" alt="" loading="lazy" decoding="async" />
-                <span class="orhan-edge"></span>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-getmoto-s1-720.webp" srcset="/src/assets/img/site-getmoto-s1-720.webp 720w, /src/assets/img/site-getmoto-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-getmoto-s2-720.webp" srcset="/src/assets/img/site-getmoto-s2-720.webp 720w, /src/assets/img/site-getmoto-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-getmoto-s3-720.webp" srcset="/src/assets/img/site-getmoto-s3-720.webp 720w, /src/assets/img/site-getmoto-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>getmoto-uk.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-getmoto-960.webp" data-loop>
+                  <source src="/src/assets/video/getmoto-loop.mp4" type="video/mp4" />
+                </video>
               </div>
-              <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>04 / 06</span> Étude conceptuelle</p>
-              <h3 class="case-title" id="orhan-title">Orhan Barber</h3>
-              <p class="case-sector">Salon de barbier · St Albans, Royaume-Uni</p>
-              <p class="case-lead">La précision qui définit une identité.</p>
-              <p class="case-role"><span>Contribution</span> Direction artistique, identité et narration du rasoir.</p>
-              <div class="actions">
-                <a class="btn btn--primary" href="/fr/etudes/orhan/">
-                  <span>Explorer l’étude</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
-                </a>
-                <a class="btn btn--quiet" href="https://orhan-barber-st-albans.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
-                </a>
-              </div>
-            </div>
-            </article>
-            <article class="chapter chapter--bayro" id="bayro" aria-labelledby="bayro-title" data-chapter="bayro">
-              <div class="duo-visual bayro-visual" aria-hidden="true">
-                <img src="/src/assets/img/window-bayro-640.webp" srcset="/src/assets/img/window-bayro-640.webp 640w, /src/assets/img/window-bayro-1024.webp 1024w" sizes="(min-width: 1024px) 40vw, 90vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
-                <span class="bayro-cut"></span>
-              </div>
-              <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>05 / 06</span> Étude conceptuelle</p>
-              <h3 class="case-title" id="bayro-title">Bayro Cut</h3>
-              <p class="case-sector">Salon de barbier · Greve, Danemark</p>
-              <p class="case-lead">Attitude et rituel à chaque coupe.</p>
-              <p class="case-role"><span>Contribution</span> Direction artistique et expérience du barbier.</p>
-              <div class="actions">
-                <a class="btn btn--primary" href="/fr/etudes/bayro/">
-                  <span>Explorer l’étude</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
-                </a>
-                <a class="btn btn--quiet" href="https://bayro-cut-greve.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
-                </a>
-              </div>
-            </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- 06 · M&M Cleaning: the planes recompose as architecture -->
-        <article class="chapter chapter--light chapter--mm" id="mm" aria-labelledby="mm-title" data-chapter="mm" data-scene>
-          <div class="wrap chapter-grid">
-            <div class="case" data-reveal>
-              <p class="eyebrow case-kicker"><span>06 / 06</span> Étude conceptuelle</p>
-              <h3 class="case-title" id="mm-title">M&amp;M Cleaning</h3>
-              <p class="case-sector">Services de nettoyage</p>
-              <p class="case-lead">Un soin qui révèle l’espace.</p>
-              <p class="case-role"><span>Contribution</span> Direction artistique et espace en couches.</p>
-              <div class="actions">
-                <a class="btn btn--dark" href="/fr/etudes/mm/">
-                  <span>Explorer l’étude</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
-                </a>
-                <a class="btn btn--quiet" href="https://mm-cleaning-one.vercel.app" target="_blank" rel="noopener">
-                  <span>Ouvrir le prototype</span>
-                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
-                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
-                </a>
-              </div>
-            </div>
-            <div class="mm-visual" aria-hidden="true">
-              <img class="mm-layer mm-layer--top" src="/src/assets/img/mm-room-861.webp" srcset="/src/assets/img/mm-room-517.webp 517w, /src/assets/img/mm-room-861.webp 861w" sizes="(min-width: 1024px) 36vw, 80vw" width="861" height="1000" alt="" loading="lazy" decoding="async" />
-              <img class="mm-layer mm-layer--mid" src="/src/assets/img/mm-room-861.webp" srcset="/src/assets/img/mm-room-517.webp 517w, /src/assets/img/mm-room-861.webp 861w" sizes="(min-width: 1024px) 36vw, 80vw" width="861" height="1000" alt="" loading="lazy" decoding="async" />
-              <img class="mm-layer mm-layer--base" src="/src/assets/img/mm-room-861.webp" srcset="/src/assets/img/mm-room-517.webp 517w, /src/assets/img/mm-room-861.webp 861w" sizes="(min-width: 1024px) 36vw, 80vw" width="861" height="1000" alt="" loading="lazy" decoding="async" />
+              <figure class="phone"><img src="/src/assets/img/site-getmoto-m0-390.webp" srcset="/src/assets/img/site-getmoto-m0-390.webp 390w, /src/assets/img/site-getmoto-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
             </div>
           </div>
         </article>
       </section>
 
-      <!-- all six, as a plain list: the way in without the animation -->
-      <section class="studies" id="estudos" aria-labelledby="estudos-title">
+      <section class="sector sector--bares" id="bares" aria-labelledby="bares-title" data-sector>
+        <header class="opener" data-opener data-scene data-emblems="tonton-bottle,cabane-glass" style="--cat: #E39A3B; --chars: 4">
+            <div class="opener-stage">
+              <canvas class="opener-canvas" aria-hidden="true"></canvas>
+              <p class="opener-ghost" aria-hidden="true"><span>Bars · Bars · Bars · Bars · Bars · Bars · </span></p>
+              <div class="wrap opener-copy">
+                <p class="eyebrow"><span>02 / 05</span> Secteur</p>
+                <h2 class="opener-title" id="bares-title"><span class="ot-line"><span>Bars</span></span></h2>
+                <p class="opener-lead">De la bouteille au verre : des lieux où retrouver ses amis, avec l’énergie de ceux qui servent au comptoir.</p>
+                <ol class="opener-list">
+                  <li><a href="#tonton"><span>03</span> Chez TonTon <em>Pontchâteau</em></a></li>
+                  <li><a href="#cabane"><span>04</span> La Cabane à Mousse <em>Herbignac</em></a></li>
+                </ol>
+              </div>
+            </div>
+          </header>
+        <article class="site site--light" id="tonton" aria-labelledby="tonton-title" data-scene style="--s-bg: #F2EBDC; --s-ink: #23211D; --s-accent: #713343; --s-label: #713343; --s-btn: #713343">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>03 / 08</span> Bars</p>
+              <h3 class="case-title" id="tonton-title">Chez TonTon</h3>
+              <p class="case-sector">Bar et cave · Pontchâteau, France</p>
+              <p class="case-lead">Du froid du frigo à la chaleur du comptoir.</p>
+              <p class="case-text">Un bar et une cave à Pontchâteau : bières et vins sur place ou à emporter. L’ouverture commence dans le frigo ; une bouteille sort du cadre, la lumière froide laisse place à une affiche de bière sur papier crème, et l’affiche passe la main au vrai bar.</p>
+              <ul class="case-tags"><li>Un raccord mesuré</li><li>Scène 2.5D au défilement</li><li>Vite</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://chez-tonton-pontchateau5.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/tonton/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-tonton-s1-720.webp" srcset="/src/assets/img/site-tonton-s1-720.webp 720w, /src/assets/img/site-tonton-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-tonton-s2-720.webp" srcset="/src/assets/img/site-tonton-s2-720.webp 720w, /src/assets/img/site-tonton-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-tonton-s3-720.webp" srcset="/src/assets/img/site-tonton-s3-720.webp 720w, /src/assets/img/site-tonton-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>chez-tonton-pontchateau5.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-tonton-960.webp" data-loop>
+                  <source src="/src/assets/video/tonton-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-tonton-m0-390.webp" srcset="/src/assets/img/site-tonton-m0-390.webp 390w, /src/assets/img/site-tonton-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+        <article class="site site--dark site--flip" id="cabane" aria-labelledby="cabane-title" data-scene style="--s-bg: #191918; --s-ink: #F5EBDD; --s-accent: #E67F22; --s-label: #E67F22; --s-btn: #E67F22">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>04 / 08</span> Bars</p>
+              <h3 class="case-title" id="cabane-title">La Cabane à Mousse</h3>
+              <p class="case-sector">Cave, bar à bières et location de tireuses · Herbignac, France</p>
+              <p class="case-lead">Un toast entre deux verres ouvre la page.</p>
+              <p class="case-text">Une cave, un bar à bières et un service de location de tireuses à Herbignac. Sur ordinateur, la page est la planche de design validée, reconstruite en HTML : le même toast et les trois mêmes chapitres sur papier déchiré, avec du vrai texte sur les images, net et lisible par les moteurs de recherche.</p>
+              <ul class="case-tags"><li>Fidèle à la planche validée</li><li>Une ouverture de 2,8 s</li><li>Vite</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://cabane-a-mousse-herbignac.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/cabane/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-cabane-s1-720.webp" srcset="/src/assets/img/site-cabane-s1-720.webp 720w, /src/assets/img/site-cabane-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-cabane-s2-720.webp" srcset="/src/assets/img/site-cabane-s2-720.webp 720w, /src/assets/img/site-cabane-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-cabane-s3-720.webp" srcset="/src/assets/img/site-cabane-s3-720.webp 720w, /src/assets/img/site-cabane-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>cabane-a-mousse-herbignac.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-cabane-960.webp" data-loop>
+                  <source src="/src/assets/video/cabane-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-cabane-m0-390.webp" srcset="/src/assets/img/site-cabane-m0-390.webp 390w, /src/assets/img/site-cabane-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="sector sector--cafes" id="cafes" aria-labelledby="cafes-title" data-sector>
+        <header class="opener" data-opener data-scene data-emblems="rumi-signature,lovinspoon-sandwich" style="--cat: #D6B76E; --chars: 11">
+            <div class="opener-stage">
+              <canvas class="opener-canvas" aria-hidden="true"></canvas>
+              <p class="opener-ghost" aria-hidden="true"><span>Cafés &amp; Restaurants · Cafés &amp; Restaurants · Cafés &amp; Restaurants · Cafés &amp; Restaurants · Cafés &amp; Restaurants · Cafés &amp; Restaurants · </span></p>
+              <div class="wrap opener-copy">
+                <p class="eyebrow"><span>03 / 05</span> Secteur</p>
+                <h2 class="opener-title" id="cafes-title"><span class="ot-line"><span>Cafés &amp;</span></span> <span class="ot-line"><span>Restaurants</span></span></h2>
+                <p class="opener-lead">De vraies photos, l’odeur du café et des plats qui donnent envie de commander.</p>
+                <ol class="opener-list">
+                  <li><a href="#rumi"><span>05</span> Rumi Cafe <em>Dublin</em></a></li>
+                  <li><a href="#lovinspoon"><span>06</span> Lovinspoon <em>Dublin</em></a></li>
+                </ol>
+              </div>
+            </div>
+          </header>
+        <article class="site site--dark" id="rumi" aria-labelledby="rumi-title" data-scene style="--s-bg: #103E49; --s-ink: #FFF8E9; --s-accent: #D6B76E; --s-label: #D6B76E; --s-btn: #D6B76E">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>05 / 08</span> Cafés &amp; Restaurants</p>
+              <h3 class="case-title" id="rumi-title">Rumi Cafe</h3>
+              <p class="case-sector">Café turco-irlandais · Dublin, Irlande</p>
+              <p class="case-lead">La vapeur du café écrit la signature de Rumi.</p>
+              <p class="case-text">Un café familial de Francis Street, à Dublin 8 : café de spécialité, douceurs turques et une façade bleu canard que tout le monde reconnaît. Un site de plusieurs pages, avec une carte de 18 produits avec recherche et filtres, histoire, galerie, club et cartes cadeaux ; les commandes se poursuivent sur le site de commande du café.</p>
+              <ul class="case-tags"><li>Site de plusieurs pages</li><li>Logo vectorisé avec OpenCV</li><li>Carte avec filtres</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://rumi-cafe-francis-street.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/rumi/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-rumi-s1-720.webp" srcset="/src/assets/img/site-rumi-s1-720.webp 720w, /src/assets/img/site-rumi-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-rumi-s2-720.webp" srcset="/src/assets/img/site-rumi-s2-720.webp 720w, /src/assets/img/site-rumi-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-rumi-s3-720.webp" srcset="/src/assets/img/site-rumi-s3-720.webp 720w, /src/assets/img/site-rumi-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>rumi-cafe-francis-street.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-rumi-960.webp" data-loop>
+                  <source src="/src/assets/video/rumi-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-rumi-m0-390.webp" srcset="/src/assets/img/site-rumi-m0-390.webp 390w, /src/assets/img/site-rumi-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+        <article class="site site--dark site--flip" id="lovinspoon" aria-labelledby="lovinspoon-title" data-scene style="--s-bg: #24231F; --s-ink: #FFFCF5; --s-accent: #E5AF35; --s-label: #E5AF35; --s-btn: #E5AF35">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>06 / 08</span> Cafés &amp; Restaurants</p>
+              <h3 class="case-title" id="lovinspoon-title">Lovinspoon</h3>
+              <p class="case-sector">Café petit-déjeuner et sandwichs · Dublin, Irlande</p>
+              <p class="case-lead">Le sandwich du déjeuner se monte couche par couche.</p>
+              <p class="case-text">Un café de Frederick Street North, à Dublin 1, pour le petit-déjeuner, les sandwichs et un bon café. Trois scènes photographiques racontent l’histoire : un sandwich qu’on vous tend, un petit-déjeuner irlandais complet et un déjeuner qui se monte couche par couche au défilement.</p>
+              <ul class="case-tags"><li>Détourages recalés</li><li>Un sandwich au défilement</li><li>Sans bloquer la page</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://lovinspoon-dublin.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/lovinspoon/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-lovinspoon-s1-720.webp" srcset="/src/assets/img/site-lovinspoon-s1-720.webp 720w, /src/assets/img/site-lovinspoon-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-lovinspoon-s2-720.webp" srcset="/src/assets/img/site-lovinspoon-s2-720.webp 720w, /src/assets/img/site-lovinspoon-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-lovinspoon-s3-720.webp" srcset="/src/assets/img/site-lovinspoon-s3-720.webp 720w, /src/assets/img/site-lovinspoon-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>lovinspoon-dublin.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-lovinspoon-960.webp" data-loop>
+                  <source src="/src/assets/video/lovinspoon-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-lovinspoon-m0-390.webp" srcset="/src/assets/img/site-lovinspoon-m0-390.webp 390w, /src/assets/img/site-lovinspoon-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="sector sector--sorveteria" id="sorveteria" aria-labelledby="sorveteria-title" data-sector>
+        <header class="opener" data-opener data-scene data-emblems="isola-scoop" style="--cat: #7FD9CB; --chars: 7">
+            <div class="opener-stage">
+              <canvas class="opener-canvas" aria-hidden="true"></canvas>
+              <p class="opener-ghost" aria-hidden="true"><span>Glacier · Glacier · Glacier · Glacier · Glacier · Glacier · </span></p>
+              <div class="wrap opener-copy">
+                <p class="eyebrow"><span>04 / 05</span> Secteur</p>
+                <h2 class="opener-title" id="sorveteria-title"><span class="ot-line"><span>Glacier</span></span></h2>
+                <p class="opener-lead">De la couleur, du goût et une scène qui change de parfum.</p>
+                <ol class="opener-list">
+                  <li><a href="#isola"><span>07</span> isola <em>Mosede Havn</em></a></li>
+                </ol>
+              </div>
+            </div>
+          </header>
+        <article class="site site--light" id="isola" aria-labelledby="isola-title" data-scene style="--s-bg: #E8EED4; --s-ink: #082A32; --s-accent: #00A99B; --s-label: #006B62; --s-btn: #082A32">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>07 / 08</span> Glacier</p>
+              <h3 class="case-title" id="isola-title">isola</h3>
+              <p class="case-sector">Glacier · Mosede Havn, Danemark</p>
+              <p class="case-lead">Quatre parfums, quatre univers, une seule scène.</p>
+              <p class="case-text">Un glacier sur le port de Mosede. La page s’ouvre sur une composition stable, le titre à gauche et une boule suspendue au-dessus du cornet, et laisse le parfum changer autour : pistache, caramel salé, mangue et framboise, au défilement ou avec le sélecteur.</p>
+              <ul class="case-tags"><li>Scène 2.5D en 14 détourages</li><li>Sélecteur de parfums</li><li>Textes en danois</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://isola-mosede.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/isola/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-isola-s1-720.webp" srcset="/src/assets/img/site-isola-s1-720.webp 720w, /src/assets/img/site-isola-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-isola-s2-720.webp" srcset="/src/assets/img/site-isola-s2-720.webp 720w, /src/assets/img/site-isola-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-isola-s3-720.webp" srcset="/src/assets/img/site-isola-s3-720.webp 720w, /src/assets/img/site-isola-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>isola-mosede.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-isola-960.webp" data-loop>
+                  <source src="/src/assets/video/isola-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-isola-m0-390.webp" srcset="/src/assets/img/site-isola-m0-390.webp 390w, /src/assets/img/site-isola-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="sector sector--barbearia" id="barbearia" aria-labelledby="barbearia-title" data-sector>
+        <header class="opener" data-opener data-scene data-emblems="bayro-clipper" style="--cat: #D5B16F; --chars: 7">
+            <div class="opener-stage">
+              <canvas class="opener-canvas" aria-hidden="true"></canvas>
+              <p class="opener-ghost" aria-hidden="true"><span>Barbier · Barbier · Barbier · Barbier · Barbier · Barbier · </span></p>
+              <div class="wrap opener-copy">
+                <p class="eyebrow"><span>05 / 05</span> Secteur</p>
+                <h2 class="opener-title" id="barbearia-title"><span class="ot-line"><span>Barbier</span></span></h2>
+                <p class="opener-lead">Précision, rituel et la lumière ambrée du fauteuil.</p>
+                <ol class="opener-list">
+                  <li><a href="#bayro"><span>08</span> Bayro Cut <em>Greve</em></a></li>
+                </ol>
+              </div>
+            </div>
+          </header>
+        <article class="site site--dark" id="bayro" aria-labelledby="bayro-title" data-scene style="--s-bg: #0B0D0C; --s-ink: #F6F2EB; --s-accent: #D5B16F; --s-label: #D5B16F; --s-btn: #D5B16F">
+          <div class="wrap site-grid">
+            <div class="case" data-reveal>
+              <p class="eyebrow case-kicker"><span>08 / 08</span> Barbier</p>
+              <h3 class="case-title" id="bayro-title">Bayro Cut</h3>
+              <p class="case-sector">Barbier · Greve, Danemark</p>
+              <p class="case-lead">La tondeuse quitte la main du barbier et termine la coupe.</p>
+              <p class="case-text">Un barbier au sein de WAVES, à Greve : coupes homme, dégradés et barbe, sur rendez-vous par téléphone. L’ouverture est une scène pilotée par le défilement où la tondeuse quitte la main du barbier, s’ouvre en corps, lame et sabot, parcourt le dégradé, et le portrait se pose dans la galerie.</p>
+              <ul class="case-tags"><li>Scène 2.5D au défilement</li><li>Pièces recalées avec OpenCV</li><li>Vite</li></ul>
+              <div class="actions">
+                <a class="btn btn--site" href="https://bayro-cut.vercel.app" target="_blank" rel="noopener">
+                  <span>Voir le site</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+                  <span class="sr-only">(s’ouvre dans un nouvel onglet)</span>
+                </a>
+                <a class="btn btn--quiet" href="/fr/projets/bayro/">
+                  <span>Voir l’étude de cas</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="site-stage" aria-hidden="true">
+              <figure class="fan fan--1"><img src="/src/assets/img/site-bayro-s1-720.webp" srcset="/src/assets/img/site-bayro-s1-720.webp 720w, /src/assets/img/site-bayro-s1-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--2"><img src="/src/assets/img/site-bayro-s2-720.webp" srcset="/src/assets/img/site-bayro-s2-720.webp 720w, /src/assets/img/site-bayro-s2-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <figure class="fan fan--3"><img src="/src/assets/img/site-bayro-s3-720.webp" srcset="/src/assets/img/site-bayro-s3-720.webp 720w, /src/assets/img/site-bayro-s3-1280.webp 1280w" sizes="(min-width: 1024px) 28vw, 60vw" width="720" height="450" alt="" loading="lazy" decoding="async" /></figure>
+              <div class="browser">
+                <p class="browser-bar"><i></i><i></i><i></i><span>bayro-cut.vercel.app</span></p>
+                <video class="browser-screen" muted loop playsinline preload="none" poster="/src/assets/img/poster-bayro-960.webp" data-loop>
+                  <source src="/src/assets/video/bayro-loop.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figure class="phone"><img src="/src/assets/img/site-bayro-m0-390.webp" srcset="/src/assets/img/site-bayro-m0-390.webp 390w, /src/assets/img/site-bayro-m0-780.webp 780w" sizes="(min-width: 1024px) 9vw, 26vw" width="390" height="844" alt="" loading="lazy" decoding="async" /></figure>
+            </div>
+          </div>
+        </article>
+      </section>
+      </div>
+
+      <!-- 03 / Social media: reels and motion graphics, previews that play on screen, the full piece with sound on demand -->
+      <section class="social" id="social" aria-labelledby="social-title" data-scene>
+        <div class="wrap social-head">
+          <p class="eyebrow">Réseaux sociaux</p>
+          <h2 class="social-title" id="social-title"><span class="ot-line"><span>Reels &amp;</span></span> <span class="ot-line"><span>motion design</span></span></h2>
+          <p class="social-manifesto" data-words>Des vidéos courtes faites pour arrêter le scroll : scénario, rythme, typographie en mouvement et une marque en quelques secondes.</p>
+        </div>
+        <div class="reels-wrap">
+          <ul class="reels" data-reels>
+          <li class="reel reel--reel" style="--k: -2.5; --ka: 2.5">
+            <button class="reel-card" type="button" data-reel="reel-mystery" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-reel-mystery-540.webp">
+                <source src="/src/assets/video/social-reel-mystery-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: Récit mystère</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Reel · 67 s</span>
+              <span class="reel-title">Récit mystère</span>
+              <span class="reel-line">Scénario, rythme et sous-titres animés</span>
+            </p>
+          </li>
+          <li class="reel reel--motion" style="--k: -1.5; --ka: 1.5">
+            <button class="reel-card" type="button" data-reel="motion-mindset" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-motion-mindset-540.webp">
+                <source src="/src/assets/video/social-motion-mindset-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: État d’esprit</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Motion design · 15 s</span>
+              <span class="reel-title">État d’esprit</span>
+              <span class="reel-line">Typographie cinétique et détourages</span>
+            </p>
+          </li>
+          <li class="reel reel--motion" style="--k: -0.5; --ka: 0.5">
+            <button class="reel-card" type="button" data-reel="motion-menu" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-motion-menu-540.webp">
+                <source src="/src/assets/video/social-motion-menu-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: Menu interactif</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Motion design · 15 s</span>
+              <span class="reel-title">Menu interactif</span>
+              <span class="reel-line">Cartes, une main à l’écran et typographie</span>
+            </p>
+          </li>
+          <li class="reel reel--motion" style="--k: 0.5; --ka: 0.5">
+            <button class="reel-card" type="button" data-reel="motion-cafe" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-motion-cafe-540.webp">
+                <source src="/src/assets/video/social-motion-cafe-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: Interface sur prise de vue</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Motion design · 13 s</span>
+              <span class="reel-title">Interface sur prise de vue</span>
+              <span class="reel-line">UI en verre sur prise de vue réelle</span>
+            </p>
+          </li>
+          <li class="reel reel--motion" style="--k: 1.5; --ka: 1.5">
+            <button class="reel-card" type="button" data-reel="motion-burger" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-motion-burger-540.webp">
+                <source src="/src/assets/video/social-motion-burger-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: Pub de livraison</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Motion design · 12 s</span>
+              <span class="reel-title">Pub de livraison</span>
+              <span class="reel-line">Rythme rapide, produit et offre</span>
+            </p>
+          </li>
+          <li class="reel reel--motion" style="--k: 2.5; --ka: 2.5">
+            <button class="reel-card" type="button" data-reel="motion-drink" aria-haspopup="dialog">
+              <video class="reel-video" muted loop playsinline preload="none" poster="/src/assets/img/social-motion-drink-540.webp">
+                <source src="/src/assets/video/social-motion-drink-preview.mp4" type="video/mp4" />
+              </video>
+              <span class="reel-play"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> <span>Regarder avec le son<span class="sr-only">: Lancement de boisson</span></span></span>
+            </button>
+            <p class="reel-meta">
+              <span class="reel-kind">Motion design · 12 s</span>
+              <span class="reel-title">Lancement de boisson</span>
+              <span class="reel-line">Produit, couleur et typographie</span>
+            </p>
+          </li>
+          </ul>
+        </div>
+        <p class="wrap social-note">Les marques visibles dans les vidéos appartiennent à leurs propriétaires respectifs.</p>
+        <dialog class="player" data-player aria-label="Réseaux sociaux">
+          <div class="player-frame">
+            <video class="player-video" controls playsinline preload="none" data-player-video></video>
+          </div>
+          <button class="player-close" type="button" data-player-close>
+            <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+            <span class="sr-only">Fermer la vidéo</span>
+          </button>
+        </dialog>
+      </section>
+
+      <!-- 04 / All projects, by sector: the way in without the animation -->
+      <section class="index" id="indice" aria-labelledby="indice-title">
         <div class="wrap">
           <header class="section-head" data-reveal>
-            <p class="eyebrow">01 — 06</p>
-            <h2 class="section-title" id="estudos-title">Toutes les études</h2>
-            <p class="section-lead">Six études conceptuelles de direction artistique, d’interface et de mouvement. Chacune garde sa propre identité.</p>
+            <p class="eyebrow">01 — 08</p>
+            <h2 class="section-title" id="indice-title">Tous les projets</h2>
+            <p class="section-lead">Des sites que j’ai créés pour de vrais commerces, classés par secteur. Chacun garde sa propre identité.</p>
           </header>
-          <ol class="study-grid">
+          <section class="index-group" aria-labelledby="ig-automotivos">
+            <h3 class="index-cat" id="ig-automotivos" data-reveal><span>01</span> Automobile <em>2 projets</em></h3>
+            <ol class="study-grid">
             <li>
-              <a class="study-card" href="/fr/etudes/sta/" data-reveal>
+              <a class="study-card" href="/fr/projets/sta/" data-reveal>
                 <figure>
                   <img src="/src/assets/img/window-sta-640.webp" srcset="/src/assets/img/window-sta-640.webp 640w, /src/assets/img/window-sta-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
                 </figure>
                 <span class="study-meta">
                   <span class="study-num">01</span>
                   <span class="study-name">Automotives STA</span>
-                  <span class="study-line">Ingénierie et précision · Garage automobile</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
+                  <span class="study-line">Garage automobile · St Albans, Royaume-Uni</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
                 </span>
               </a>
             </li>
             <li>
-              <a class="study-card" href="/fr/etudes/isola/" data-reveal>
+              <a class="study-card" href="/fr/projets/getmoto/" data-reveal>
+                <figure>
+                  <img src="/src/assets/img/window-getmoto-640.webp" srcset="/src/assets/img/window-getmoto-640.webp 640w, /src/assets/img/window-getmoto-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
+                </figure>
+                <span class="study-meta">
+                  <span class="study-num">02</span>
+                  <span class="study-name">GetMOTO</span>
+                  <span class="study-line">Réparation et location de motos · Luton, Royaume-Uni</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
+                </span>
+              </a>
+            </li>
+            </ol>
+          </section>
+          <section class="index-group" aria-labelledby="ig-bares">
+            <h3 class="index-cat" id="ig-bares" data-reveal><span>02</span> Bars <em>2 projets</em></h3>
+            <ol class="study-grid">
+            <li>
+              <a class="study-card" href="/fr/projets/tonton/" data-reveal>
+                <figure>
+                  <img src="/src/assets/img/window-tonton-640.webp" srcset="/src/assets/img/window-tonton-640.webp 640w, /src/assets/img/window-tonton-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
+                </figure>
+                <span class="study-meta">
+                  <span class="study-num">03</span>
+                  <span class="study-name">Chez TonTon</span>
+                  <span class="study-line">Bar et cave · Pontchâteau, France</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="study-card" href="/fr/projets/cabane/" data-reveal>
+                <figure>
+                  <img src="/src/assets/img/window-cabane-640.webp" srcset="/src/assets/img/window-cabane-640.webp 640w, /src/assets/img/window-cabane-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
+                </figure>
+                <span class="study-meta">
+                  <span class="study-num">04</span>
+                  <span class="study-name">La Cabane à Mousse</span>
+                  <span class="study-line">Cave, bar à bières et location de tireuses · Herbignac, France</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
+                </span>
+              </a>
+            </li>
+            </ol>
+          </section>
+          <section class="index-group" aria-labelledby="ig-cafes">
+            <h3 class="index-cat" id="ig-cafes" data-reveal><span>03</span> Cafés &amp; Restaurants <em>2 projets</em></h3>
+            <ol class="study-grid">
+            <li>
+              <a class="study-card" href="/fr/projets/rumi/" data-reveal>
+                <figure>
+                  <img src="/src/assets/img/window-rumi-640.webp" srcset="/src/assets/img/window-rumi-640.webp 640w, /src/assets/img/window-rumi-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
+                </figure>
+                <span class="study-meta">
+                  <span class="study-num">05</span>
+                  <span class="study-name">Rumi Cafe</span>
+                  <span class="study-line">Café turco-irlandais · Dublin, Irlande</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="study-card" href="/fr/projets/lovinspoon/" data-reveal>
+                <figure>
+                  <img src="/src/assets/img/window-lovinspoon-640.webp" srcset="/src/assets/img/window-lovinspoon-640.webp 640w, /src/assets/img/window-lovinspoon-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
+                </figure>
+                <span class="study-meta">
+                  <span class="study-num">06</span>
+                  <span class="study-name">Lovinspoon</span>
+                  <span class="study-line">Café petit-déjeuner et sandwichs · Dublin, Irlande</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
+                </span>
+              </a>
+            </li>
+            </ol>
+          </section>
+          <section class="index-group" aria-labelledby="ig-sorveteria">
+            <h3 class="index-cat" id="ig-sorveteria" data-reveal><span>04</span> Glacier <em>1 projet</em></h3>
+            <ol class="study-grid">
+            <li>
+              <a class="study-card" href="/fr/projets/isola/" data-reveal>
                 <figure>
                   <img src="/src/assets/img/window-isola-640.webp" srcset="/src/assets/img/window-isola-640.webp 640w, /src/assets/img/window-isola-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
                 </figure>
                 <span class="study-meta">
-                  <span class="study-num">02</span>
-                  <span class="study-name">Isola</span>
-                  <span class="study-line">Saveurs en orbite · Glacier</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
+                  <span class="study-num">07</span>
+                  <span class="study-name">isola</span>
+                  <span class="study-line">Glacier · Mosede Havn, Danemark</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
                 </span>
               </a>
             </li>
+            </ol>
+          </section>
+          <section class="index-group" aria-labelledby="ig-barbearia">
+            <h3 class="index-cat" id="ig-barbearia" data-reveal><span>05</span> Barbier <em>1 projet</em></h3>
+            <ol class="study-grid">
             <li>
-              <a class="study-card" href="/fr/etudes/legend/" data-reveal>
-                <figure>
-                  <img src="/src/assets/img/window-legend-640.webp" srcset="/src/assets/img/window-legend-640.webp 640w, /src/assets/img/window-legend-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
-                </figure>
-                <span class="study-meta">
-                  <span class="study-num">03</span>
-                  <span class="study-name">Legend Nails</span>
-                  <span class="study-line">Le geste comme signature · Manucure et nail art</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="study-card" href="/fr/etudes/orhan/" data-reveal>
-                <figure>
-                  <img src="/src/assets/img/window-orhan-640.webp" srcset="/src/assets/img/window-orhan-640.webp 640w, /src/assets/img/window-orhan-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
-                </figure>
-                <span class="study-meta">
-                  <span class="study-num">04</span>
-                  <span class="study-name">Orhan Barber</span>
-                  <span class="study-line">Identité et lame de lumière · Salon de barbier</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="study-card" href="/fr/etudes/bayro/" data-reveal>
+              <a class="study-card" href="/fr/projets/bayro/" data-reveal>
                 <figure>
                   <img src="/src/assets/img/window-bayro-640.webp" srcset="/src/assets/img/window-bayro-640.webp 640w, /src/assets/img/window-bayro-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
                 </figure>
                 <span class="study-meta">
-                  <span class="study-num">05</span>
+                  <span class="study-num">08</span>
                   <span class="study-name">Bayro Cut</span>
-                  <span class="study-line">Attitude et rituel · Salon de barbier</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
+                  <span class="study-line">Barbier · Greve, Danemark</span>
+                  <span class="study-tag">Voir l’étude de cas</span>
                 </span>
               </a>
             </li>
-            <li>
-              <a class="study-card" href="/fr/etudes/mm/" data-reveal>
-                <figure>
-                  <img src="/src/assets/img/window-mm-640.webp" srcset="/src/assets/img/window-mm-640.webp 640w, /src/assets/img/window-mm-1024.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 92vw" width="640" height="400" alt="" loading="lazy" decoding="async" />
-                </figure>
-                <span class="study-meta">
-                  <span class="study-num">06</span>
-                  <span class="study-name">M&amp;M Cleaning</span>
-                  <span class="study-line">L’espace en couches · Services de nettoyage</span>
-                  <span class="study-tag">Étude conceptuelle · Explorer l’étude</span>
-                </span>
-              </a>
-            </li>
-          </ol>
+            </ol>
+          </section>
         </div>
       </section>
 
@@ -612,9 +945,10 @@
         </p>
         <ul class="footer-links">
           <li><a href="#projetos">Projets</a></li>
+          <li><a href="#social">Social</a></li>
           <li><a href="https://www.linkedin.com/in/josean-araujo-3ba63b17b/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a></li>
         </ul>
-        <p class="footer-note">© <span data-year>2026</span> Josean Araújo. Les six projets sont des études conceptuelles.</p>
+        <p class="footer-note">© <span data-year>2026</span> Josean Araújo. Des sites créés pour de vrais commerces.</p>
       </div>
     </footer>
   </body>
