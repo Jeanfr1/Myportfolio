@@ -46,7 +46,22 @@
       "permanent": true
     },
     {
-      "source": "/estudos/:slug*",
+      "source": "/estudos",
+      "destination": "/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/",
+      "destination": "/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/:slug",
+      "destination": "/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/estudos/:slug/",
       "destination": "/#indice",
       "permanent": true
     },
@@ -81,7 +96,22 @@
       "permanent": true
     },
     {
-      "source": "/en/studies/:slug*",
+      "source": "/en/studies",
+      "destination": "/en/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/",
+      "destination": "/en/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/:slug",
+      "destination": "/en/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/en/studies/:slug/",
       "destination": "/en/#indice",
       "permanent": true
     },
@@ -116,7 +146,22 @@
       "permanent": true
     },
     {
-      "source": "/fr/etudes/:slug*",
+      "source": "/fr/etudes",
+      "destination": "/fr/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/",
+      "destination": "/fr/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/:slug",
+      "destination": "/fr/#indice",
+      "permanent": true
+    },
+    {
+      "source": "/fr/etudes/:slug/",
       "destination": "/fr/#indice",
       "permanent": true
     }
